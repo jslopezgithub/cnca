@@ -62,7 +62,7 @@ This registration is only done the first time the program is used.
 | PERMISSION str: polling station | PERMESSO str: seggio elettorale |
 
 ## Use Case
-!(images/UseCase.png)
+!(https://github.com/jslopezgithub/cnca/blob/master/docs/images/UseCase.png?raw=true)
 1. Registration Form
     1. Fill out form
     2. Print and sign form
