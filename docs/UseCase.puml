@@ -1,0 +1,10 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor volunteer
+rectangle {
+volunteer --> (register)
+volunteer --> (enter activities)
+volunteer --> (submit monthly report)
+}
+@enduml
