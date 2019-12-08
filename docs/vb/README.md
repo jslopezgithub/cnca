@@ -8,7 +8,7 @@ ___
    |-- Foglio4 (RIEPILOGO)  
    |-- Foglio5 (REGISTRO)  
    |-- Questa_cartella_di_lavoro  
-|-- Forms All forms look the same ![](../docs/images/forms/UserForm1.png)  
+|-- Forms All forms look the same ![](../images/forms/UserForm1.png)  
    |-- UserForm1 
    |-- UserForm2  
    |-- UserForm3  
@@ -26,4 +26,4 @@ ___
    |-- Modulo7  Sends a copy of the REGISTRO sheet by email  
    |-- Modulo8  Copy the REGISTRO sheet  
 
-Sample PDF file for the registration. ![](../docs/images/Frontespizio.png)
+Sample PDF file for the registration. ![](../images/Frontespizio.png)
