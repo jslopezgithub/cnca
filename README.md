@@ -95,3 +95,8 @@ This registration is only done the first time the program is used.
 5. Generate a summary
 6. Data entry validation
 
+## Design
+### Database Schema
+![](docs/database/Volonteerdiagram.png)
+
+
