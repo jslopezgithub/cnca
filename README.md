@@ -1,4 +1,4 @@
-# try to run using this command lines (npm run dev)
+# Try to run using this command line (npm run dev)
 
 # Volunteer Attendance Tracking
 
