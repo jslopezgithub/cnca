@@ -4,7 +4,7 @@ const chalk = require('chalk');
 const app = require('./app');
 
 // eslint-disable-next-line radix
-const port = parseInt(process.env.PORT || '3000');
+const port = parseInt(process.env.PORT || '5000');
 
 app.use((err, req, res, next) => {
   if (res.headersSent) {

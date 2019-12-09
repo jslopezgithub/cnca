@@ -4,10 +4,10 @@ module.exports = {
     commonjs: true,
     es6: true
   },
-  extends: ["plugin:react/recommended", "airbnb-base"],
+  extends: ['plugin:react/recommended', 'airbnb-base'],
   globals: {
-    Atomics: "readonly",
-    SharedArrayBuffer: "readonly"
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly'
   },
   parserOptions: {
     ecmaFeatures: {
@@ -15,6 +15,8 @@ module.exports = {
     },
     ecmaVersion: 2018
   },
-  plugins: ["react"],
-  rules: {}
+  plugins: ['react'],
+  rules: {
+    'comma-dangle': 'off'
+  }
 };
