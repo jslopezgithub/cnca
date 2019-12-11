@@ -21,6 +21,13 @@ if (process.env.NODE.ENV === 'production') {
   app.use(express.static('client/build'));
 
   app.get('*', (req, res) => {
+    const templatePath = path.resolve(
+      __dirname,
+      'client',
+      'build',
+      'index.html'
+    );
+    console.log('templatePath', templatePath, __dirname);
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 }
