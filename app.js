@@ -39,7 +39,6 @@ app.get('*', (req, res, next) => {
     return next();
   }
   const staticPath = path.join(staticDir, 'index.html');
-
   console.log('staticPath', staticPath, staticDir);
   res.sendFile(staticPath);
 });
