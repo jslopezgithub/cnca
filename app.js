@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const express = require('express');
 const helmet = require('helmet');
 const morgan = require('morgan');
@@ -7,6 +8,7 @@ const apiRouter = require('./api');
 
 const apiRoot = '/api';
 const app = express();
+
 const staticDir = path.join(__dirname, 'client/build');
 
 // General configuration
