@@ -1,0 +1,1 @@
+{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,MACE,WACF,CAEA,SACE,UACF,CAEA,eACE,qBACF","file":"main.fa70d9ed.chunk.css","sourcesContent":[".logo {\n  width: 100px;\n}\n\n.message {\n  color: blue;\n}\n\n.message:hover {\n  background-color: yellow;\n}\n"]}
