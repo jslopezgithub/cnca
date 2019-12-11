@@ -36,7 +36,9 @@ app.get('*', (req, res, next) => {
   if (req.url.startsWith(apiRoot)) {
     return next();
   }
-  res.sendFile(path.join(staticDir, 'index.html'));
+  const staticPath = path.join(staticDir, 'index.html');
+  console.log('staticPath', staticPath, staticDir);
+  res.sendFile(staticPath);
 });
 
 module.exports = app;
