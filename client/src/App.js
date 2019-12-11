@@ -5,12 +5,16 @@ import { getMessage } from './service';
 import './App.css';
 
 export class App extends Component {
-  state = { message: 'Loading...' };
+  constructor(props) {
+    super(props);
+    this.state = { message: 'Loading...' };
+  }
 
   componentDidMount() {
     getMessage().then(message => this.setState({ message }));
   }
 
+  // eslint-disable-next-line class-methods-use-this
   render() {
     // const { message } = this.state;
     return (
