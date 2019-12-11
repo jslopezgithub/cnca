@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { getMessage } from './service';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 export class App extends Component {
@@ -12,7 +12,7 @@ export class App extends Component {
   }
 
   render() {
-    const { message } = this.state;
+    // const { message } = this.state;
     return (
       <div>
         {/* <img
@@ -21,10 +21,10 @@ export class App extends Component {
           src={logo}
           alt="Just the React logo"
         /> */}
-        <p className="message" data-qa="message">
+        {/* <p className="message" data-qa="message">
           {message}
-        </p>
-        <h>Cnca Project</h>
+        </p> */}
+        <h1>Cnca Project</h1>
       </div>
     );
   }

@@ -6,6 +6,7 @@
   color: blue;
 }
 
-.message:hover {
+h1:hover {
   background-color: yellow;
+  text-align: center;
 }
