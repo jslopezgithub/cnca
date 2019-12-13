@@ -19,6 +19,7 @@ module.exports = {
   rules: {
     'comma-dangle': 'off',
     'no-console': 'off',
-    'arrow-parens': 'off'
+    'arrow-parens': 'off',
+    'consistent-return': 'off'
   }
 };
