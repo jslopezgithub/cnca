@@ -20,7 +20,6 @@ module.exports = {
     'comma-dangle': 'off',
     'no-console': 'off',
     'arrow-parens': 'off',
-    'consistent-return': 'off',
-    'comma-dangle': 'off'
+    'consistent-return': 'off'
   }
 };
