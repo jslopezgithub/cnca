@@ -23,7 +23,11 @@
     "missing": "0.0.1",
     "mongodb": "^3.3.5",
     "morgan": "^1.9.1",
-    "nodemon": "^2.0.1"
+    "nodemon": "^2.0.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router": "^5.1.2",
+    "react-scripts": "^3.3.0"
   },
   "devDependencies": {
     "concurrently": "^5.0.0",
