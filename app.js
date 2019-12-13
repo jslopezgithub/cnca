@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 /* eslint-disable max-len */
-=======
->>>>>>> 56460ff1e356afcd24588b010556d4bb55a429a8
 const express = require('express');
 const helmet = require('helmet');
 const morgan = require('morgan');
@@ -11,12 +8,8 @@ const apiRouter = require('./api');
 
 const apiRoot = '/api';
 const app = express();
-<<<<<<< HEAD
 
 const staticDir = path.join(__dirname, 'client/build');
-=======
-const staticDir = path.join(__dirname, 'static');
->>>>>>> 56460ff1e356afcd24588b010556d4bb55a429a8
 
 // General configuration
 app.use(express.json());
@@ -45,13 +38,9 @@ app.get('*', (req, res, next) => {
   if (req.url.startsWith(apiRoot)) {
     return next();
   }
-<<<<<<< HEAD
   const staticPath = path.join(staticDir, 'index.html');
   console.log('staticPath', staticPath, staticDir);
   res.sendFile(staticPath);
-=======
-  res.sendFile(path.join(staticDir, 'index.html'));
->>>>>>> 56460ff1e356afcd24588b010556d4bb55a429a8
 });
 
 module.exports = app;

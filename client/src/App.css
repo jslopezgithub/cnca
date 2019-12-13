@@ -6,12 +6,7 @@
   color: blue;
 }
 
-<<<<<<< HEAD
 h1:hover {
   background-color: yellow;
   text-align: center;
-=======
-.message:hover {
-  background-color: yellow;
->>>>>>> 56460ff1e356afcd24588b010556d4bb55a429a8
 }

@@ -1,4 +1,4 @@
-:diffg RE# Try to run using this command line (npm run dev)
+# Try to run using this command line (npm run dev)
 
 # Volunteer Attendance Tracking
 
@@ -111,25 +111,3 @@ This registration is only done the first time the program is used.
 ### Database Schema
 
 ![](docs/database/Volonteerdiagram.png)
-<<<<<<< HEAD
-=======
-
-### Screens
-1. Login
-![Login](docs/images/design/Login.png)
-
-2. Registration
-![Registration](docs/images/design/registration.png)
-
-3. Forgot Password
-![Forgot your password](docs/images/design/Forgot%20your%20password.png)
-
-4. First Page (Modulo)
-![First Page](docs/images/design/FirstPage.png)
-
-5. Second Page (Riepilogo)
-![Second Page](docs/images/design/secondpage.png)
-
-6. Third Page (Registro)
-![Third Page](docs/images/design/3rdpage.png)
->>>>>>> 56460ff1e356afcd24588b010556d4bb55a429a8

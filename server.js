@@ -1,10 +1,7 @@
 /* eslint-disable no-console */
 const http = require('http');
-<<<<<<< HEAD
 const express = require('express');
 const path = require('path');
-=======
->>>>>>> 56460ff1e356afcd24588b010556d4bb55a429a8
 const chalk = require('chalk');
 const app = require('./app');
 
@@ -20,7 +17,6 @@ app.use((err, req, res, next) => {
 });
 
 const server = http.createServer(app);
-<<<<<<< HEAD
 if (process.env.NODE.ENV === 'production') {
   app.use(express.static('client/build'));
 
@@ -35,8 +31,6 @@ if (process.env.NODE.ENV === 'production') {
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 }
-=======
->>>>>>> 56460ff1e356afcd24588b010556d4bb55a429a8
 
 server.listen(port);
 
