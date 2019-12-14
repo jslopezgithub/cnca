@@ -9,7 +9,7 @@ const apiRouter = require('./api');
 const apiRoot = '/api';
 const app = express();
 
-const staticDir = path.join(__dirname, 'client/build');
+const staticDir = path.join(__dirname, 'Frontend/build');
 
 // General configuration
 app.use(express.json());

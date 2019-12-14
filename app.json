@@ -1,7 +1,5 @@
 {
-  "name": "Starter Kit",
+  "name": "Cnca Project",
   "description": "Starter kit for full-stack JavaScript projects",
-  "addons": [
-    "mongolab:sandbox"
-  ]
+  "addons": ["mongolab:sandbox"]
 }

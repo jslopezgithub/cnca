@@ -18,17 +18,17 @@ app.use((err, req, res, next) => {
 
 const server = http.createServer(app);
 if (process.env.NODE.ENV === 'production') {
-  app.use(express.static('client/build'));
+  app.use(express.static('Frontend/build'));
 
   app.get('*', (req, res) => {
     const templatePath = path.resolve(
       __dirname,
-      'client',
+      'Frontend',
       'build',
       'index.html'
     );
     console.log('templatePath', templatePath, __dirname);
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'Frontend', 'build', 'index.html'));
   });
 }
 
