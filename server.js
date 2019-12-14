@@ -6,4 +6,4 @@ app.use(express.static("./Frontend/build"))
 
 app.listen(PORT, () => { 
   console.log("app started");
-})
+});

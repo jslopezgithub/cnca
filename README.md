@@ -110,4 +110,4 @@ This registration is only done the first time the program is used.
 
 ### Database Schema
 
-![](docs/database/Volonteerdiagram.png)
+![](docs/database/dbdiagram.jpg)
