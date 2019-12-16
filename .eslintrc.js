@@ -20,6 +20,7 @@ module.exports = {
     'comma-dangle': 'off',
     'no-console': 'off',
     'arrow-parens': 'off',
-    'consistent-return': 'off'
+    'consistent-return': 'off',
+    'import/no-named-as-default': 0
   }
 };
