@@ -11,7 +11,8 @@
     "lint": "eslint .",
     "lint:fix": "eslint  --fix .",
     "dev": "concurrently \"npm run server\" \"npm run Frontend\"",
-    "heroku-postbuild": "npm install --prefix Frontend && npm run build --prefix Frontend"
+    "heroku-postbuild": "npm install --prefix Frontend && npm run build --prefix Frontend",
+    "clean": "rm -rf node_modules Frontend/node_modules"
   },
   "author": "",
   "license": "ISC",
