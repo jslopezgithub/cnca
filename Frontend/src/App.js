@@ -1,9 +1,6 @@
 /* eslint-disable import/no-named-as-default */
 import React, { Component } from 'react';
 
-import FirstPageMain from './components/first-page/FirstPageMain';
-import SecondPageMain from './components/second-page/SecondPageMain';
-
 import { getMessage } from './service';
 // import logo from './logo.svg';
 import './App.css';
@@ -24,8 +21,6 @@ class App extends Component {
     return (
       <div>
         <h1>Cnca Project</h1>
-        <FirstPageMain />
-        <SecondPageMain />
       </div>
     );
   }
