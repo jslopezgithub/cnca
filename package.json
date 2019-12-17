@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "cnca",
   "version": "1.0.0",
   "description": "Server ======",
   "main": "Backend/server.js",
@@ -40,5 +40,9 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^1.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jslopezgithub/cnca.git"
   }
 }
