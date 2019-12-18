@@ -20,7 +20,7 @@ class App extends Component {
     // const { message } = this.state;
     return (
       <div>
-        <h1>Cnca Project</h1>
+        <h1>Cnca Project Team-3 </h1>
       </div>
     );
   }
