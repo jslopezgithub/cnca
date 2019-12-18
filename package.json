@@ -39,12 +39,7 @@
     "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "husky": "^3.1.0",
-    "lint-staged": "^9.5.0",
-    "typescript": "^3.7.3"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jslopezgithub/cnca.git"
+    "lint-staged": "^9.5.0"
   },
   "test:nowatch": "CI=true react-scripts-ts test --env=jsdom",
   "husky": {
