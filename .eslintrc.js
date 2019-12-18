@@ -4,9 +4,9 @@ module.exports = {
     commonjs: true,
     es6: true
   },
-  //extends: ['plugin:react/recommended', 'airbnb-base'],
-  //plugins: ['react'],
-  extends: ['react-app', 'plugin:jsx-a11y/recommended'],
+  extends: ['plugin:react/recommended', 'airbnb-base'],
+  // plugins: ['react'],
+  // extends: ['react-app', 'plugin:jsx-a11y/recommended'],
   plugins: ['jsx-a11y'],
 
   globals: {
@@ -19,6 +19,7 @@ module.exports = {
     },
     ecmaVersion: 2018
   },
+  ignorePatterns: ['temp.js', 'node_modules/', 'Frontend/build'],
   rules: {
     'comma-dangle': 'off',
     'no-console': 'off',
@@ -33,7 +34,6 @@ module.exports = {
       flowVersion: '0.53'
     },
     propWrapperFunctions: [
-      // The names of any function used to wrap propTypes, e.g. `forbidExtraProps`. If this isn't set, any propTypes wrapped in a function will be skipped.
       'forbidExtraProps',
       { property: 'freeze', object: 'Object' },
       { property: 'myFavoriteWrapper' }
