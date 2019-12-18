@@ -1,9 +1,9 @@
 .UserImg {
   border-radius: 50%;
+
   width: 85px;
   height: 85px;
   margin: 17px 135px 0px;
-  color: #d2c7c1;
 }
 
 .UserImg:hover:before {
