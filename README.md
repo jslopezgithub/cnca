@@ -1,3 +1,7 @@
+# Husky will run lint automatically before we commit our changes and also before we push to our Master Repository it checks the test files .
+
+# To bypass this linting and testing process add <--no-verify> to your command line
+
 # Try to run using this command line (npm run dev)
 
 # Volunteer Attendance Tracking
@@ -113,26 +117,28 @@ This registration is only done the first time the program is used.
 ![](docs/database/dbdiagram.JPG)
 
 ### Screens
+
 1. Login
-![Login](docs/images/design/Login.png)
+   ![Login](docs/images/design/Login.png)
 
 2. Registration
-![Registration](docs/images/design/registration.png)
+   ![Registration](docs/images/design/registration.png)
 
 3. Forgot Password
-![Forgot your password](docs/images/design/Forgot%20your%20password.png)
+   ![Forgot your password](docs/images/design/Forgot%20your%20password.png)
 
 4. First Page (Modulo)
-![First Page](docs/images/design/FirstPage.png)
+   ![First Page](docs/images/design/FirstPage.png)
 
 5. Second Page (Riepilogo)
-![Second Page](docs/images/design/secondpage.png)
+   ![Second Page](docs/images/design/secondpage.png)
 
 6. Third Page (Registro)
-![Third Page](docs/images/design/3rdpage.png)
+   ![Third Page](docs/images/design/3rdpage.png)
 
 ### Components
+
 1. High Level  
-![High Level](docs/images/design/FirstPagesch.png)
+   ![High Level](docs/images/design/FirstPagesch.png)
 2. First Page Components  
-![First page](docs/images/design/firstpageReview.jpg)
+   ![First page](docs/images/design/firstpageReview.jpg)
