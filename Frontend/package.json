@@ -4,7 +4,7 @@
   "description": "Frontend ======",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watchAll",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject"

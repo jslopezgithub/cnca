@@ -4,7 +4,7 @@
   "description": "Server ======",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watchAll",
     "build": "react-scripts build",
     "start": "node server.js",
     "client": "npm start --prefix Frontend",
@@ -22,6 +22,7 @@
     "chalk": "^3.0.0",
     "express": "^4.17.1",
     "helmet": "^3.21.2",
+    "jest": "^24.9.0",
     "missing": "0.0.1",
     "mongodb": "^3.4.0",
     "morgan": "^1.9.1",
@@ -44,11 +45,7 @@
   "test:nowatch": "CI=true react-scripts-ts test --env=jsdom",
   "husky": {
     "hooks": {
-      "pre-commit": [
-        "precommit-msg",
-        "lint",
-        "test:nowatch"
-      ],
+      "pre-commit": "npm run lint",
       "pre-push": "npm test"
     }
   }
