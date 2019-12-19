@@ -1,5 +1,9 @@
 import React from "react";
-import "../App.css";
+import UserData from "./UserData/UserData";
 export default function Home() {
-  return <div className="Home"></div>;
+  return (
+    <div className="Home">
+      <UserData />
+    </div>
+  );
 }

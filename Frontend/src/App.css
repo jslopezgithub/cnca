@@ -24,13 +24,12 @@ h1:hover {
   color: white;
   text-align: center;
   font-weight: bold;
-  height: 35px;
 }
 .Home {
   margin-top: 15px;
   margin-right: 15px;
-  height: 580px;
-  width: 930px;
+  height: 530px;
+  width: 820px;
   background-color: white;
   border-radius: 2%;
   float: right;

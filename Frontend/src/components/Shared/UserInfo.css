@@ -1,6 +1,6 @@
 .maincontainer {
   width: 340px;
-  height: 609px;
+  height: 560px;
   background-color: #212121;
 }
 .userInfo {
@@ -10,7 +10,7 @@
 .dataInput {
   margin: 5px 0px 5px 0px;
   width: 8cm;
-  height: 30px;
+  height: 25px;
   border: 2px solid #eee;
   border-left: 2px solid;
   border-radius: 5px;
