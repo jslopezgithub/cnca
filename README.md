@@ -131,3 +131,8 @@ This registration is only done the first time the program is used.
 6. Third Page (Registro)
 ![Third Page](docs/images/design/3rdpage.png)
 
+### Components
+1. High Level  
+![High Level](docs/images/design/FirstPagesch.png)
+2. First Page Components  
+![First page](docs/images/design/firstpageReview.jpg)
