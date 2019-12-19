@@ -1,6 +1,10 @@
-# Husky will run lint automatically before we commit our changes and also before we push to our Master Repository it checks the test files .
+# Husky
 
-# To bypass this linting and testing process add <--no-verify> to your command line
+Husky will run lint automatically before we commit our changes and also before we push to our Master Repository it checks the test files .
+
+# To bypass this linting and testing process
+
+Add <--no-verify> to your command line
 
 # Try to run using this command line (npm run dev)
 
