@@ -75,13 +75,16 @@ CREATE TABLE `users_tokens` (
 
 INSERT INTO activity_types(nome)  
 VALUES
-("totale ore indicate"),
-("ingresso"),
-("uscita"),
-("ore attività"),
-("malattia"),
+("attività1"),
+("attività2"),
+("attività3"),
 ("ferie"),
-("permessi str"),
-("formazione"),
-("selezionare tipo attività da menù a tendina"),
-("settimana");
+("malattia"),
+("Recupero ore lavoro in festivo"),
+("Formazione Generale"),
+("Formazione Specifica"),
+("Formazione FAD"),
+("PERMESSO str: donazione sangue");
+("PERMESSO str: diritto di voto");
+("PERMESSO str: testimone g");
+("PERMESSO str: seggio elettorale");
