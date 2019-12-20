@@ -71,3 +71,17 @@ CREATE TABLE `users_tokens` (
   KEY `user_token_owner` (`user_id`),
   CONSTRAINT `user_token_owner` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+INSERT INTO activity_types(nome)  
+VALUES
+("totale ore indicate"),
+("ingresso"),
+("uscita"),
+("ore attività"),
+("malattia"),
+("ferie"),
+("permessi str"),
+("formazione"),
+("selezionare tipo attività da menù a tendina"),
+("settimana");
