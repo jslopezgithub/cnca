@@ -1,15 +1,11 @@
 /* eslint-disable import/no-named-as-default */
 import React, { Component } from 'react';
 
-class Activity extends Component {
+class FullnameDate extends Component {
   constructor(props) {
     super(props);
     this.state = { userInfo: 'Loading...' };
   }
-
-  //   componentDidMount() {
-  //     getMessage().then(message => this.setState({ message }));
-  //   }
 
   // eslint-disable-next-line class-methods-use-this
   render() {
@@ -21,4 +17,4 @@ class Activity extends Component {
     );
   }
 }
-export default Activity;
+export default FullnameDate;

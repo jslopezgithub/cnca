@@ -1,12 +1,13 @@
 /* eslint-disable import/no-named-as-default */
 import React, { Component } from 'react';
 
-import FirstPageMain from './components/first-page/FirstPageMain';
-import SecondPageMain from './components/second-page/SecondPageMain';
-
 import { getMessage } from './service';
 // import logo from './logo.svg';
 import './App.css';
+import UserInfo from './components/Shared/UserInfo';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './components/Home';
 
 class App extends Component {
   constructor(props) {
@@ -23,9 +24,10 @@ class App extends Component {
     // const { message } = this.state;
     return (
       <div>
-        <h1>Cnca Project</h1>
-        <FirstPageMain />
-        <SecondPageMain />
+        <Navbar />
+        <Home />
+        <UserInfo />
+        <Footer />
       </div>
     );
   }

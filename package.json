@@ -1,27 +1,28 @@
 {
-  "name": "server",
+  "name": "cnca",
   "version": "1.0.0",
   "description": "Server ======",
-  "main": "Backend/server.js",
+  "main": "server.js",
   "scripts": {
-    "test": "jest",
-    "start": "node Backend/server.js",
+    "test": "jest --watchAll",
+    "build": "react-scripts build",
+    "start": "node server.js",
     "client": "npm start --prefix Frontend",
-    "server": "nodemon Backend/server.js",
+    "server": "nodemon server.js",
     "lint": "eslint .",
-    "lint:fix": "eslint eslintrc.js --fix .",
+    "lint:fix": "eslint  --fix .",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "npm install --prefix client && npm run build --prefix Frontend"
+    "heroku-postbuild": "npm install --no-optional --prefix Frontend && npm run build --prefix Frontend",
+    "clean": "rm -rf node_modules Frontend/node_modules"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.0",
-    "chalk": "^3.0.0",
     "express": "^4.17.1",
     "helmet": "^3.21.2",
     "missing": "0.0.1",
-    "mongodb": "^3.3.5",
+    "mongodb": "^3.4.1",
     "morgan": "^1.9.1",
     "mysql": "^2.17.1",
     "nodemon": "^2.0.2",
@@ -29,18 +30,28 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router": "^5.1.2",
-    "react-scripts": "^3.3.0"
+    "react-scripts": "^3.3.0",
+    "react": "^16.12.0"
   },
   "devDependencies": {
-    "concurrently": "^5.0.0",
+    "concurrently": "^5.0.2",
     "cors": "^2.8.5",
     "eslint": "^6.7.2",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.17.0",
-    "eslint-plugin-react-hooks": "^1.7.0",
-    "sequelize-cli": "^5.5.1"
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.5.0"
+  },
+  "test:nowatch": "CI=true react-scripts-ts test --env=jsdom",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm test"
+    }
   }
 }
