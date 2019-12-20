@@ -1,11 +1,11 @@
-import React from "react";
-import Calender from "./Calender";
-import Days from "./Days";
-import TotalHours from "./TotalHours";
-import TotalTime from "./TotalTime";
-import UserName from "./UserName";
-//import Columns from "./columns";
-import "./FirstPage.css";
+import React from 'react';
+import Calender from './Calender';
+import Days from './Days';
+import TotalHours from './TotalHours';
+import TotalTime from './TotalTime';
+import UserName from './UserName';
+// import Columns from "./columns";
+import './FirstPage.css';
 
 export default function FirstPage() {
   return (
