@@ -22,13 +22,8 @@
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "^3.3.0",
-<<<<<<< HEAD
     "react-test-renderer": "^16.12.0",
     "sass": "^1.23.7",
-||||||| merged common ancestors
-    "react-test-renderer": "^16.12.0",
-=======
->>>>>>> e3bafa1ce51d9bc82da9009082fa3b1bf2fa4ffa
     "typescript": "^3.7.3"
   },
   "browserslist": {

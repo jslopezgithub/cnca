@@ -1,11 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import 'bulma/css/bulma.css';
-||||||| merged common ancestors
-import React from "react";
-=======
-import React from 'react';
->>>>>>> e3bafa1ce51d9bc82da9009082fa3b1bf2fa4ffa
 
 export default function TotalTime() {
   return (

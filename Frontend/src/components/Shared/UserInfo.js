@@ -12,19 +12,9 @@ export default class UserInfo extends Component {
         <UserImg />
 
         <i
-<<<<<<< HEAD
-          onClick={''}
+          // onClick={''}
           className='fa fa-pencil-square-o btn'
           aria-hidden='true'
-||||||| merged common ancestors
-          onClick={""}
-          className="fa fa-pencil-square-o btn"
-          aria-hidden="true"
-=======
-          onClick={''}
-          className="fa fa-pencil-square-o btn"
-          aria-hidden="true"
->>>>>>> e3bafa1ce51d9bc82da9009082fa3b1bf2fa4ffa
           style={{ fontSize: 30 }}
         ></i>
 
