@@ -1,15 +1,34 @@
-/* .FirstPage {
-  display: flex;
-  height: 100px;
-  width: 100px;
-  background-color: burlywood;
+* {
+  box-sizing: border-box;
 }
-.MainTotalHours {
-  
-  height: 30px;
-  width: 6cm;
-  background-color: #00468b;
-  margin-left: 300px;
-  margin-top: 400px;
+.FirstPage {
+  background-color: white;
+  height: 528px;
+  border-radius: 3%;
 }
- */
+.listnumber {
+  position: absolute;
+  top: 88%;
+  right: 29.5%;
+}
+
+.next {
+  position: absolute;
+  top: 88%;
+  right: 22%;
+}
+.next:hover {
+  background-color: #1c5fc2;
+  transition: 0.5s;
+  color: white;
+}
+.pevious {
+  position: absolute;
+  top: 88%;
+  left: 54%;
+}
+.pevious:hover {
+  background-color: #1c5fc2;
+  transition: 0.5s;
+  color: white;
+}

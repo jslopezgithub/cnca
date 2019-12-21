@@ -1,10 +1,11 @@
-import React from "react";
-import "../App.css";
+import React from 'react';
+import '../App.css';
+
 export default function Footer() {
   const style = {
-    backgroundColor: "gray",
-    color: "black",
-    textAlign: "center",
+    backgroundColor: 'gray',
+    color: 'black',
+    textAlign: 'center',
     fontSize: 10
   };
 
