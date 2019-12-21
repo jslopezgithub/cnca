@@ -71,3 +71,20 @@ CREATE TABLE `users_tokens` (
   KEY `user_token_owner` (`user_id`),
   CONSTRAINT `user_token_owner` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+INSERT INTO activity_types(nome)  
+VALUES
+("attività1"),
+("attività2"),
+("attività3"),
+("ferie"),
+("malattia"),
+("Recupero ore lavoro in festivo"),
+("Formazione Generale"),
+("Formazione Specifica"),
+("Formazione FAD"),
+("PERMESSO str: donazione sangue");
+("PERMESSO str: diritto di voto");
+("PERMESSO str: testimone g");
+("PERMESSO str: seggio elettorale");

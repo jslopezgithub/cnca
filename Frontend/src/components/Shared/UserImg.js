@@ -8,8 +8,16 @@ export default class UserImg extends Component {
     return (
       <div className='UserImg icon'>
         <i
+<<<<<<< HEAD
           className='fa fa-user-circle'
           aria-hidden='true'
+||||||| merged common ancestors
+          class="fa fa-user-circle"
+          aria-hidden="true"
+=======
+          className="fa fa-user-circle"
+          aria-hidden="true"
+>>>>>>> e3bafa1ce51d9bc82da9009082fa3b1bf2fa4ffa
           style={{ fontSize: 100 }}
         ></i>
       </div>
