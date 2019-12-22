@@ -29,7 +29,7 @@ class App extends Component {
       <div>
         <Navbar />
         {/* <Registration /> */}
-        <SecondCompMain />
+        {/* <SecondCompMain /> */}
         {/* <UserInfo /> */}
         <Footer />
       </div>
