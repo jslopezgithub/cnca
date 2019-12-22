@@ -1,15 +1,16 @@
 import React from 'react';
 import DatePicker from 'react-datepicker';
+import './Calander.css';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
-/* CSS Modules, react-datepicker-cssmodules.css
+/* CSS Modules, react-datepicker-cssmodules.css*/
 import 'react-datepicker/dist/react-datepicker-cssmodules.css';
-  */
+
 class Calander extends React.Component {
   constructor(props) {
     super(props);
-    state = {
+    this.state = {
       startDate: new Date()
     };
   }
