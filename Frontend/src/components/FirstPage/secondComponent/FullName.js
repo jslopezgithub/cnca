@@ -1,5 +1,7 @@
 import React from 'react';
 
-export default function Calender() {
+function FullName() {
   return <div></div>;
 }
+
+export default FullName;

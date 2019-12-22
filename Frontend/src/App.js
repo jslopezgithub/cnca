@@ -4,10 +4,11 @@ import React, { Component } from 'react';
 import { getMessage } from './service';
 // import logo from './logo.svg';
 import './App.css';
-import UserInfo from './components/Shared/UserInfo';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './components/Home';
+import UserInfo from './components/Shared/userInfo/UserInfo';
+import Navbar from './components/Shared/Navbar';
+import Footer from './components/Shared/Footer';
+// eslint-disable-next-line import/no-named-as-default-member
+// import Registration from './components/registration/Registration';
 
 class App extends Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class App extends Component {
     return (
       <div>
         <Navbar />
-        <Home />
+        {/* <Registration /> */}
         <UserInfo />
         <Footer />
       </div>
