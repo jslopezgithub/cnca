@@ -19,7 +19,7 @@ module.exports = {
     },
     ecmaVersion: 2018
   },
-  ignorePatterns: ['temp.js', 'node_modules/', 'Frontend/build'],
+  ignorePatterns: ['temp.js', 'node_modules/', 'Frontend/build', '*.test.js'],
   rules: {
     'comma-dangle': 'off',
     'no-console': 'off',

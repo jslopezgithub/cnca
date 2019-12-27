@@ -8,7 +8,7 @@ USE cnca;
 CREATE TABLE `holidays` (
   `id` int(11) NOT NULL,
   `date` date NOT NULL,
-  `name` varchar(64) DEFAULT NULL,
+  `nome` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -16,7 +16,7 @@ CREATE TABLE `roles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 AVG_ROW_LENGTH=8192;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -33,11 +33,11 @@ CREATE TABLE `users` (
   `image` mediumblob DEFAULT NULL,
   `createdAt` datetime DEFAULT current_timestamp(),
   `updatedAt` datetime DEFAULT NULL,
+  
   PRIMARY KEY (`id`,`email`),
   UNIQUE KEY `UK_users_id` (`id`),
   UNIQUE KEY `email` (`email`),
   KEY `FK_users_roles_id` (`role_id`),
-  CONSTRAINT `FK_users_roles_id` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`),
   CONSTRAINT `user_role_id` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -49,17 +49,20 @@ CREATE TABLE `activity_types` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `activities` (
-  `id` int(11) NOT NULL,
-  `volunteer_id` int(11) NOT NULL,
-  `activity_date` date DEFAULT NULL,
-  `start_time` time DEFAULT NULL,
-  `end_time` time DEFAULT NULL,
-  `activity_type_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `volunteer_id` int(11)        NOT NULL,
+  `activity_date` date DEFAULT  NULL,
+  `start_time`  time            NOT NULL,
+  `end_time`    time            NOT NULL,
+  `activity_type_id` int(11)    NOT NULL,
+  `createdAt` datetime DEFAULT current_timestamp(),
+  `updatedAt` datetime DEFAULT NULL,
+
   PRIMARY KEY (`id`),
   KEY `activity_type_id` (`activity_type_id`),
   KEY `FK_activity_users_id` (`volunteer_id`),
-  CONSTRAINT `activity_owner_id` FOREIGN KEY (`volunteer_id`) REFERENCES `users` (`id`),
-  CONSTRAINT `activity_type_id` FOREIGN KEY (`activity_type_id`) REFERENCES `activity_types` (`id`)
+  CONSTRAINT `activity_owner_id`  FOREIGN KEY (`volunteer_id`)      REFERENCES `users` (`id`),
+  CONSTRAINT `activity_type_id`   FOREIGN KEY (`activity_type_id`)  REFERENCES `activity_types` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `users_tokens` (
@@ -72,19 +75,3 @@ CREATE TABLE `users_tokens` (
   CONSTRAINT `user_token_owner` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
-INSERT INTO activity_types(nome)  
-VALUES
-("attività1"),
-("attività2"),
-("attività3"),
-("ferie"),
-("malattia"),
-("Recupero ore lavoro in festivo"),
-("Formazione Generale"),
-("Formazione Specifica"),
-("Formazione FAD"),
-("PERMESSO str: donazione sangue");
-("PERMESSO str: diritto di voto");
-("PERMESSO str: testimone g");
-("PERMESSO str: seggio elettorale");
