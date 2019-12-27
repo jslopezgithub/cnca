@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+.MainTotalHours {
+  display: flex;
+  justify-content: space-around;
+  height: 30px;
+  width: 7cm;
+  background-color: #00468b;
+  position: relative;
+  left: 35%;
+  top: 80%;
+  color: white;
+  text-align: rleft;
+  padding: 5px;
+  z-index: 1;
+}
+
+.timecontainer {
+  background-color: white;
+  height: 20px;
+  width: 1.5cm;
+  border-radius: 25%;
+  float: right;
+  text-align: center;
+  color: black;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.settimana {
+  background-color: #00a3ff;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  left: 23%;
+  top: 100%;
+  width: 4cm;
+}
+.settimanaTime {
+  margin-top: 2px;
+  background-color: white;
+  height: 20px;
+  width: 1cm;
+  border-radius: 25%;
+  float: right;
+  text-align: center;
+  color: black;
+  overflow: hidden;
+}
