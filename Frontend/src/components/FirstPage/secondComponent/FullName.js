@@ -1,5 +1,6 @@
 import React from 'react';
 import 'bulma/css/bulma.css';
+// eslint-disable-next-line import/no-named-as-default-member
 import Calander from './Calander';
 
 function FullName() {
