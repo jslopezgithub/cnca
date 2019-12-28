@@ -1,5 +1,5 @@
 use cnca;
-INSERT INTO roles (nome) 
+INSERT INTO roles (name)
 VALUES ("owner"), ("admin"), ("user");
 
 
