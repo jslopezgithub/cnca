@@ -13,7 +13,11 @@
     "lint:fix": "eslint  --fix .",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "npm install --no-optional --prefix Frontend && npm run build --prefix Frontend",
-    "clean": "rm -rf node_modules Frontend/node_modules"
+    "clean": "rm -rf node_modules Frontend/node_modules",
+    "up-db": "docker-compose up -d",
+    "down-db": "docker-compose down",
+    "start-db": "docker-compose start",
+    "stop-db": "docker-compose stop"
   },
   "author": "",
   "license": "ISC",
@@ -38,6 +42,7 @@
   "devDependencies": {
     "concurrently": "^5.0.2",
     "cors": "^2.8.5",
+    "docker-compose": "^0.23.1",
     "eslint": "^6.7.2",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-airbnb-base": "^14.0.0",
