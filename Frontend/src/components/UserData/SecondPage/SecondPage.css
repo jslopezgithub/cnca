@@ -1,0 +1,28 @@
+.SecondPageContainer {
+  display: flex;
+  position: fixed;
+  width: 71%;
+  height: 91%;
+  flex-wrap: wrap;
+  top: 5%;
+  left: 27%;
+  border-radius: 15px;
+  background-color: #e7e8ee;
+}
+.firstSpace,
+.secondSpace,
+.thirdSpace {
+  position: absolute;
+  height: 140px;
+  width: 250px;
+  left: 33%;
+  top: 13%;
+  background-color: #aeb9c7;
+  border-radius: 15px;
+}
+.secondSpace {
+  top: 42%;
+}
+.thirdSpace {
+  top: 71%;
+}

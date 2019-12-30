@@ -1,0 +1,52 @@
+.UserName {
+  background-color: #487eb0;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  height: 60px;
+  width: 220px;
+
+  border-radius: 0px 15px 15px 0px;
+}
+.nameInput {
+  margin-top: 2px;
+  width: 75%;
+}
+.calender {
+  position: absolute;
+  left: 76%;
+  width: 50px;
+  height: 60px;
+}
+.calenderIcon {
+  position: relative;
+  overflow: hidden;
+  top: 9px;
+  left: 5px;
+  color: white;
+  font-size: 40px;
+}
+.calenderIcon:hover {
+  position: relative;
+  overflow: hidden;
+  top: 7.5px;
+  left: 4.5px;
+  color: #dcdde1;
+  font-size: 41px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.nameInput span {
+  display: flex;
+  background-color: white;
+  position: relative;
+  border: none;
+  top: 7%;
+  width: 165px;
+  height: 20px;
+  border-radius: 0px 10px 10px 0px;
+  margin: 3px 0px 1px 0px;
+  text-align: center;
+  padding-left: 10px;
+  font-size: 14px;
+}

@@ -4,6 +4,6 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url('./Images/hero.jpg');
+  background-image: url('../Images/hero.jpg');
   background-size: cover;
 }

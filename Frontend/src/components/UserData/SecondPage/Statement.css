@@ -1,0 +1,68 @@
+.StatementBox {
+  position: relative;
+  background-color: #487eb0;
+  width: 45%;
+  height: 62px;
+  left: 15%;
+  color: white;
+  overflow: hidden;
+  border-radius: 0px 0px 10px 10px;
+}
+.whiteBox {
+  display: grid;
+  position: absolute;
+  width: 90px;
+  height: fit-content;
+  left: 35%;
+  color: #353b48;
+}
+.whiteBox p {
+  font-size: 12px;
+  text-align: center;
+}
+.whiteSpace {
+  position: relative;
+  background-color: white;
+  width: 90px;
+  height: 17px;
+  border-radius: 12px;
+  margin-top: 1.6px;
+  overflow: hidden;
+}
+.whiteBox4 {
+  position: relative;
+  left: 70%;
+  top: 1.5px;
+  background-color: white;
+  width: 90px;
+  height: 17px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.pargraph {
+  display: grid;
+  position: absolute;
+  width: 130px;
+  height: 59px;
+  overflow: hidden;
+  font-size: 13px;
+  margin: 1px;
+  left: 1%;
+}
+.al {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 62%;
+  top: 0%;
+}
+.al p {
+  font-size: 13px;
+  margin: 1px;
+  color: white;
+}
+.whiteBox4 p {
+  font-size: 12px;
+  color: #353b48;
+  text-align: center;
+}

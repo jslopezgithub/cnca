@@ -1,34 +1,42 @@
-* {
-  box-sizing: border-box;
+.FristPage {
+  display: flex;
+  position: relative;
+  width: 71%;
+  height: 81%;
+  flex-wrap: wrap;
+  top: 5%;
+  left: 27%;
+  border-radius: 15px;
+  background-color: #e7e8ee;
 }
-.FirstPage {
-  background-color: white;
-  height: 528px;
-  border-radius: 3%;
-}
-.listnumber {
+.daystyling {
   position: absolute;
-  top: 88%;
-  right: 29.5%;
+  left: 3%;
+  top: 23%;
+  background-color: #487eb0;
+  width: 119px;
+  height: 395px;
+  border-radius: 15px;
 }
-
-.next {
+.ingressobox {
   position: absolute;
-  top: 88%;
-  right: 22%;
-}
-.next:hover {
-  background-color: #1c5fc2;
-  transition: 0.5s;
+  left: 38.5%;
+  top: 20%;
+  background-color: #487eb0;
+  width: 91px;
+  height: 50px;
+  border-radius: 15px 15px 0px 0px;
+  text-align: center;
   color: white;
 }
-.pevious {
+.uscitabox {
   position: absolute;
-  top: 88%;
-  left: 54%;
-}
-.pevious:hover {
-  background-color: #1c5fc2;
-  transition: 0.5s;
+  left: 49.5%;
+  top: 20%;
+  background-color: #487eb0;
+  width: 91px;
+  height: 50px;
+  border-radius: 15px 15px 0px 0px;
+  text-align: center;
   color: white;
 }

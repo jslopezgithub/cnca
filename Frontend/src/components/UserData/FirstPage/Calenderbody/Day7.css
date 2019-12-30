@@ -1,0 +1,13 @@
+.mainContainer7 {
+  position: fixed;
+  top: 82%;
+  left: 30%;
+  width: 60%;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  border-radius: 290486px;
+  border: #b2bec3 solid 1px;
+  overflow: hidden;
+  box-shadow: #95a0ad 1px 1px 3px;
+}

@@ -1,13 +1,15 @@
 /* eslint-disable import/no-named-as-default */
 import React, { Component } from 'react';
-
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { getMessage } from './service';
-// import logo from './logo.svg';
 import './App.css';
-import UserInfo from './components/Shared/UserInfo';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './components/Home';
+
+import Navbar from './components/Shared/Navbar';
+import Footer from './components/Shared/Footer';
+import AfterLogin from './components/AfterLogin';
+import Login from './components/login/Login';
+import ForgotenPass from './components/forgotenPass/ForgotenPass';
+import Registration from './components/registration/Registration';
 
 class App extends Component {
   constructor(props) {
@@ -23,12 +25,19 @@ class App extends Component {
   render() {
     // const { message } = this.state;
     return (
-      <div>
-        <Navbar />
-        <Home />
-        <UserInfo />
-        <Footer />
-      </div>
+      <Router>
+        <div>
+          <Navbar />
+          <Switch>
+            <Route path='/' exact component={Login} />
+            <Route path='/password' component={ForgotenPass} />
+            <Router path='/re' component={Registration} />
+            <Router path='/user' component={AfterLogin} />
+          </Switch>
+          <Registration />
+          <Footer />
+        </div>
+      </Router>
     );
   }
 }

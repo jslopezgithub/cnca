@@ -1,9 +1,9 @@
-#mainContainer {
+#registrationContainer {
   display: flex;
   height: -webkit-fill-available;
   width: -webkit-fill-available;
 }
-.body {
+.registrationBody {
   background-image: linear-gradient(
     to top,
     lightgrey 0%,
@@ -14,58 +14,68 @@
     #bcbcbc 100%
   );
   background-blend-mode: normal, multiply;
+
   position: relative;
   width: 70%;
   left: 15%;
 }
-.dataBox {
+
+.regesrdataBox {
   position: relative;
   background-size: cover;
-  left: 28%;
-  top: 27%;
-  width: 45%;
-  height: 40%;
+  left: 10%;
+  width: 80%;
+  height: 100%;
   background-color: #2f3640;
   border-radius: 20px;
   overflow: hidden;
 }
-.inputs {
+.sideBox {
+  height: 100%;
+  width: 30%;
+  background-image: url('../../Images/sidebox.jpg');
+  background-size: cover;
+  opacity: 40%;
+  background-color: #2f3640;
+}
+.registerRightSide {
+  position: relative;
+  top: -8%;
+  width: 90%;
+  height: 100%;
+  float: right;
+  left: 12%;
+}
+.registerRightSide input {
   display: grid;
   position: relative;
-  top: 15%;
-  left: 15%;
-  width: 70%;
-  overflow: hidden;
-}
-.inputs input {
+  left: 10%;
   height: 40px;
   border-radius: 20px;
   border: none;
-  margin-top: 10px;
+  margin-top: 30px;
   color: #353b48;
   font-size: 16px;
   overflow: hidden;
   text-align: center;
   border: gray solid 1px;
   font-style: italic;
+  width: 70%;
 }
 
-.btn button {
+.registerbtn button {
   border: none;
   position: absolute;
-  top: 60%;
+  top: 99%;
   left: 15%;
-  width: 70%;
-  height: 40px;
-  font-size: 16px;
+  width: 60%;
+  height: 35px;
+  font-size: 24px;
   color: white;
   background-color: #0097e6;
-  font-style: italic;
-  border-radius: 20px;
 }
-.btn button:hover {
+.registerbtn :hover {
   cursor: pointer;
   background-color: #6ab7e0;
-
   transition: 0.5s;
 }

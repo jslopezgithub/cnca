@@ -1,16 +1,24 @@
-/* eslint-disable react/react-in-jsx-scope */
-import React, { Component } from 'react';
-// eslint-disable-next-line import/prefer-default-export
-export class Registration extends Component {
-  // eslint-disable-next-line class-methods-use-this
-  render() {
-    return (
-      // eslint-disable-next-line react/react-in-jsx-scope
-      <div>
-        {/* // eslint-disable-next-line react/react-in-jsx-scope */}
-        <h1>Registration form</h1>
+import React from 'react';
+import './Registration.css';
+
+export default function Registration() {
+  return (
+    <div id='registrationContainer'>
+      <div className='registrationBody'>
+        <div className='regesrdataBox'>
+          <div className='registerRightSide'>
+            <span className='inputs'>
+              <input type='text' placeholder='Nome'></input>
+              <input type='text' placeholder='Cognome'></input>
+              <input type='text' placeholder='E-mail'></input>
+              <input type='password' placeholder='Password'></input>
+              <input type='password' placeholder='Ripeti Password'></input>
+            </span>
+            <button> Iscriviti</button>
+          </div>
+          <div className='sideBox'> </div>
+        </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
-export default Registration;

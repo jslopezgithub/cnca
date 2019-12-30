@@ -1,0 +1,99 @@
+.maincontainer {
+  display: flex;
+  background-color: #353b48;
+  width: 25%;
+  margin-left: 15px;
+  height: 561px;
+  position: inherit;
+}
+.userinfo {
+  position: relative;
+  color: white;
+  top: 19%;
+  right: 15%;
+  max-height: 400px;
+  text-align: center;
+  overflow: hidden;
+}
+.inputa {
+  position: relative;
+  border: none;
+  height: 25px;
+  width: 5.6cm;
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+.grayInput {
+  background-color: #dcdde1;
+}
+
+.userinfo p {
+  margin: 4px 0px 1px 0px;
+}
+
+/* ______________________________________________ Icons */
+.icons {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 86%;
+  left: 3%;
+
+  width: 250px;
+  height: 30px;
+}
+.icons i {
+  color: #f5f6fa;
+  text-align: center;
+  font-size: 28px;
+  position: relative;
+  left: 0.5%;
+}
+.icons i:hover {
+  color: #44bd32;
+  cursor: pointer;
+  transition: 0.5s;
+}
+/* ______________________________________________ Pagination */
+.block {
+  position: absolute;
+  top: 92%;
+  left: 9%;
+  color: white;
+}
+.next {
+  right: 21%;
+  position: relative;
+  color: white;
+  background-color: white;
+}
+
+.previous {
+  position: relative;
+  background-color: white;
+  right: 79%;
+  border-radius: 50% !important;
+}
+.next:hover {
+  color: white !important;
+  background-color: #7f8fa6;
+  opacity: 80%;
+  transition: 0.5s;
+}
+.previous :hover {
+  color: white !important;
+  background-color: #7f8fa6;
+  opacity: 80%;
+  transition: 0.5s;
+}
+.current {
+  background-color: #f5f6fa !important;
+  color: black !important ;
+  opacity: 80%;
+}
+.plink {
+  background-color: none !important;
+  color: white !important ;
+  opacity: 80%;
+}

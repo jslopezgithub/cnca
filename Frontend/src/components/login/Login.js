@@ -1,16 +1,44 @@
-/* eslint-disable react/react-in-jsx-scope */
 import React, { Component } from 'react';
-// eslint-disable-next-line import/prefer-default-export
-export class Login extends Component {
+import './login.css';
+
+export default class Login extends Component {
   // eslint-disable-next-line class-methods-use-this
   render() {
     return (
-      // eslint-disable-next-line react/react-in-jsx-scope
-      <div>
-        {/* // eslint-disable-next-line react/react-in-jsx-scope */}
-        <h1>Login form</h1>
+      <div id='mainContainer'>
+        <div className='body'>
+          <div className='dataBox'>
+            <div className='dataBox2'>
+              <span className='inputs'>
+                <input type='text' placeholder='E-Mail'></input>
+                <span className='iconBackground'>
+                  <i className='Eicon fas fa-envelope'></i>
+                </span>
+                <input type='password' placeholder='password'></input>
+                <span className='iconBackground2'>
+                  <i className='Eicon2 fas fa-lock'></i>
+                </span>
+              </span>
+              <span className='checkBox'>
+                <input type='checkbox' />
+              </span>
+              <p className='Resta'>Resta collegato</p>
+              <button className='btn'>ACCESSO</button>
+              {/* ------------------------------Forget password  & Registration Links */}
+              <div className='fpassword'>
+                <a style={{ color: 'white' }} href='#'>
+                  Ha dimrnticato <br /> la password?
+                </a>
+              </div>
+              <div className='registare'>
+                <a style={{ color: 'white' }} href='#'>
+                  Registare
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
 }
-export default Login;

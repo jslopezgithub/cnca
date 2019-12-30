@@ -1,0 +1,12 @@
+.mainContainer1 {
+  position: fixed;
+  top: 28%;
+  left: 30%;
+  width: 60%;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  border-radius: 290486px;
+  border: #b2bec3 solid 1px;
+  overflow: hidden;
+}

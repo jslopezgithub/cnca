@@ -7,10 +7,10 @@ export default function TotalTime() {
       style={{
         position: 'absolute',
         justifyContent: 'space-around',
-        top: '4%',
-        right: '1.2%',
-        width: '69.3%',
-        fontSize: 10
+        top: '0%',
+        right: '2.1%',
+        width: '31%',
+        fontSize: 8
       }}
       className='tablesizing table__wrapper maintable  table-cell-border content is-small '
     >
@@ -19,7 +19,7 @@ export default function TotalTime() {
           <th className='tg-a46p is-light'>ORE ATTITVITA</th>
           <th className='tg-0pky '>0:00:00</th>
           <th className='tg-0pky'>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </th>
           <th className='tg-0pky is-warning'>0:00</th>
         </tr>
@@ -52,8 +52,8 @@ export default function TotalTime() {
             style={{
               position: 'absolute',
               justifyContent: 'space-around',
-              width: '122.5px',
-              right: '.01%',
+              width: '260px',
+              right: '.02%',
               textAlign: 'center',
               fontSize: 10,
               border: 'solid green .1px'

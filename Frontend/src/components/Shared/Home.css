@@ -1,6 +1,7 @@
-.UserData {
+.Home {
   display: flex;
-  position: relative;
+  position: absolute;
+  background-color: #f5f6fa;
   width: 71%;
   height: 91%;
   flex-wrap: wrap;
