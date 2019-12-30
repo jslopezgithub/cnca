@@ -9,7 +9,7 @@ export default function ForgotenPass() {
           <span className='inputs'>
             <input type='text' placeholder='E-Mail'></input>
           </span>
-          <span className='btn'>
+          <span className='passworbtn'>
             <button>ottenere una nuova password</button>
           </span>
         </div>

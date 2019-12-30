@@ -14,7 +14,9 @@ export default function Registration() {
               <input type='password' placeholder='Password'></input>
               <input type='password' placeholder='Ripeti Password'></input>
             </span>
-            <button> Iscriviti</button>
+            <span className='registerbtn'>
+              <button> Iscriviti</button>
+            </span>
           </div>
           <div className='sideBox'> </div>
         </div>

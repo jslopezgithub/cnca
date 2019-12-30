@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './login.css';
 
 export default class Login extends Component {
@@ -7,8 +8,8 @@ export default class Login extends Component {
     return (
       <div id='mainContainer'>
         <div className='body'>
-          <div className='dataBox'>
-            <div className='dataBox2'>
+          <div className='dataBoxcont'>
+            <div className='dataBoxcont2'>
               <span className='inputs'>
                 <input type='text' placeholder='E-Mail'></input>
                 <span className='iconBackground'>
@@ -23,17 +24,19 @@ export default class Login extends Component {
                 <input type='checkbox' />
               </span>
               <p className='Resta'>Resta collegato</p>
-              <button className='btn'>ACCESSO</button>
+              <Link to='./home'>
+                <button className='btn'>ACCESSO</button>
+              </Link>
               {/* ------------------------------Forget password  & Registration Links */}
               <div className='fpassword'>
-                <a style={{ color: 'white' }} href='#'>
+                <Link to='./forget-password' style={{ color: 'white' }}>
                   Ha dimrnticato <br /> la password?
-                </a>
+                </Link>
               </div>
               <div className='registare'>
-                <a style={{ color: 'white' }} href='#'>
+                <Link to='./sign-up' style={{ color: 'white' }}>
                   Registare
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -50,7 +50,7 @@
   font-style: italic;
 }
 
-.btn button {
+.passworbtn button {
   border: none;
   position: absolute;
   top: 60%;
@@ -63,7 +63,7 @@
   font-style: italic;
   border-radius: 20px;
 }
-.btn button:hover {
+.passworbtn button:hover {
   cursor: pointer;
   background-color: #6ab7e0;
 

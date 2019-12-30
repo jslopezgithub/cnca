@@ -32,8 +32,8 @@
 }
 .sideBox {
   height: 100%;
-  width: 30%;
-  background-image: url('../../Images/sidebox.jpg');
+  width: 35%;
+  background-image: url('../../Images/sideboximg.jpg');
   background-size: cover;
   opacity: 40%;
   background-color: #2f3640;
@@ -66,9 +66,9 @@
 .registerbtn button {
   border: none;
   position: absolute;
-  top: 99%;
-  left: 15%;
-  width: 60%;
+  top: 80%;
+  left: 22.5%;
+  width: 48%;
   height: 35px;
   font-size: 24px;
   color: white;
