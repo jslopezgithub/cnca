@@ -13,14 +13,20 @@
     "lint:fix": "eslint  --fix .",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "npm install --no-optional --prefix Frontend && npm run build --prefix Frontend",
-    "clean": "rm -rf node_modules Frontend/node_modules"
+    "clean": "rm -rf node_modules Frontend/node_modules",
+    "up-db": "docker-compose up -d",
+    "down-db": "docker-compose down",
+    "start-db": "docker-compose start",
+    "stop-db": "docker-compose stop"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "helmet": "^3.21.2",
+    "knex": "^0.20.4",
     "missing": "0.0.1",
     "mongodb": "^3.4.1",
     "morgan": "^1.9.1",
@@ -28,14 +34,15 @@
     "nodemon": "^2.0.2",
     "orm": "^5.0.5",
     "react": "^16.12.0",
+    "react-datepicker": "^2.10.1",
     "react-dom": "^16.12.0",
     "react-router": "^5.1.2",
-    "react-scripts": "^3.3.0",
-    "react": "^16.12.0"
+    "react-scripts": "^3.3.0"
   },
   "devDependencies": {
     "concurrently": "^5.0.2",
     "cors": "^2.8.5",
+    "docker-compose": "^0.23.1",
     "eslint": "^6.7.2",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-airbnb-base": "^14.0.0",

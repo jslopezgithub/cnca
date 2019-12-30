@@ -1,4 +1,6 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
+// eslint-disable-next-line import/no-unresolved
 import TotalHours from './TotalHours';
 import TotalTime from './TotalTime';
 import UserName from './UserName';

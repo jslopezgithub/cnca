@@ -1,0 +1,23 @@
+# Use root/password as user/password credentials
+version: '3.1'
+services:
+  db:
+    image: mariadb:latest
+    restart: always
+    build: .
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: cnca
+      MYSQL_USER: cnca
+      MYSQL_PASSWORD: cnca
+    volumes:
+      - ./docs/database/install.sql:/docker-entrypoint-initdb.d/1-create.sql
+      - ./docs/database/fakedata.sql:/docker-entrypoint-initdb.d/2-init.sql
+    ports:
+      - 3306:3306
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

@@ -1,4 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD:Frontend/src/components/Shared/Footer.js
+||||||| merged common ancestors
+import '../App.css';
+=======
+import '../../App.css';
+>>>>>>> 33da0e49befe25b97d3ab0bf869cf9cae9596e42:Frontend/src/components/Shared/Footer.js
 
 export default function Footer() {
   const style = {
