@@ -27,10 +27,10 @@ class App extends Component {
         <div>
           <Navbar />
           <Switch>
-            <Route path='/' exact component={Login} />
-            <Route path='/sign-up' component={Registration} />
-            <Route path='/forget-password' component={ForgotenPass} />
-            <Route path='/Home' component={AfterLogin} />
+            <Route path="/" exact component={Login} />
+            <Route path="/sign-up" component={Registration} />
+            <Route path="/forget-password" component={ForgotenPass} />
+            <Route path="/Home" component={AfterLogin} />
           </Switch>
           <Footer />
         </div>
