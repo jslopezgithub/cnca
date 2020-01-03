@@ -5,7 +5,7 @@ import './AfterLogin.css';
 
 export default function AfterLogin() {
   return (
-    <div>
+    <div className='afterloginsizing'>
       <Home />
       <UserInfo />
     </div>
