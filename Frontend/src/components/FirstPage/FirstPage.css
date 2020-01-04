@@ -1,27 +1,26 @@
 .FristPage {
   display: flex;
-  position: relative;
+  position: absolute;
   width: 71%;
   height: 81%;
   flex-wrap: wrap;
-  top: 5%;
+  top: 2%;
   left: 27%;
   border-radius: 15px;
-  background-color: #e7e8ee;
 }
 .daystyling {
   position: absolute;
-  left: 3%;
-  top: 23%;
+  left: 9.5%;
+  top: 12%;
   background-color: #487eb0;
-  width: 119px;
-  height: 395px;
+  width: 13%;
+  height: 64%;
   border-radius: 15px;
 }
 .ingressobox {
   position: absolute;
-  left: 38.5%;
-  top: 20%;
+  left: 44%;
+  top: 9%;
   background-color: #487eb0;
   width: 91px;
   height: 50px;
@@ -31,8 +30,8 @@
 }
 .uscitabox {
   position: absolute;
-  left: 49.5%;
-  top: 20%;
+  left: 55%;
+  top: 9%;
   background-color: #487eb0;
   width: 91px;
   height: 50px;

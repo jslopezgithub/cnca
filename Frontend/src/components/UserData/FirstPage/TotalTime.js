@@ -7,10 +7,10 @@ export default function TotalTime() {
       style={{
         position: 'absolute',
         justifyContent: 'space-around',
-        top: '0%',
-        right: '2.1%',
-        width: '31%',
-        fontSize: 8
+        top: '76%',
+        right: '26%',
+        width: '50%',
+        fontSize: 9
       }}
       className='tablesizing table__wrapper maintable  table-cell-border content is-small '
     >
@@ -52,7 +52,7 @@ export default function TotalTime() {
             style={{
               position: 'absolute',
               justifyContent: 'space-around',
-              width: '260px',
+              width: '100%',
               right: '.02%',
               textAlign: 'center',
               fontSize: 10,

@@ -3,14 +3,14 @@
   background-color: #353b48;
   width: 25%;
   margin-left: 15px;
-  height: 561px;
-  position: inherit;
+  height: 95%;
+  position: fixed;
 }
 .userinfo {
   position: relative;
   color: white;
-  top: 19%;
-  right: 15%;
+  top: 21%;
+  right: 10%;
   max-height: 400px;
   text-align: center;
   overflow: hidden;
@@ -19,81 +19,79 @@
   position: relative;
   border: none;
   height: 25px;
-  width: 5.6cm;
+  width: 6cm;
   border-radius: 20px;
-
+  text-align: center;
   overflow: hidden;
+  font-style: italic;
+  color: #353b48;
+  font-size: small;
+  margin-bottom: 3px;
 }
-.grayInput {
-  background-color: #dcdde1;
+.xclick,
+.yesclick {
+  position: absolute;
+  right: 5px;
+  border-radius: 50%;
+  border: none;
+  width: 24px;
+  height: 24px;
+  background-color: #4cd137;
+  color: white;
+}
+.xclick {
+  background-color: #4cd137;
 }
 
+.yesclick {
+  right: 30px;
+}
+.xclick:hover,
+.yesclick:hover {
+  background-color: #072707;
+  transition: 0.4s;
+}
+
+.editview {
+  border: green solid 2px;
+  background-color: #f9fcce;
+}
 .userinfo p {
   margin: 4px 0px 1px 0px;
 }
 
-/* ______________________________________________ Icons */
-.icons {
-  display: flex;
-  justify-content: space-around;
-  position: absolute;
-  top: 86%;
-  left: 3%;
-
-  width: 250px;
-  height: 30px;
-}
-.icons i {
-  color: #f5f6fa;
-  text-align: center;
-  font-size: 28px;
-  position: relative;
-  left: 0.5%;
-}
-.icons i:hover {
-  color: #44bd32;
-  cursor: pointer;
-  transition: 0.5s;
-}
 /* ______________________________________________ Pagination */
-.block {
+.paginationBody {
   position: absolute;
-  top: 92%;
-  left: 9%;
-  color: white;
+  top: 91%;
+  left: 8%;
+  background: #fff;
+  display: flex;
+  padding: 10px 10px;
+  border-radius: 50px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-.next {
-  right: 21%;
-  position: relative;
-  color: white;
-  background-color: white;
+.paginationBody li {
+  list-style: none;
+  line-height: 15px;
+  margin: 0 10px;
+}
+.paginationBody li.pageNumber {
+  text-align: center;
+}
+.paginationBody li a {
+  display: block;
+  text-decoration: none;
+  color: #777;
+  font-weight: 600;
+  border-radius: 50%;
 }
 
-.previous {
-  position: relative;
-  background-color: white;
-  right: 79%;
-  border-radius: 50% !important;
+.paginationBody li.pageNumber:hover a,
+.paginationBody li.pageNumber.active a {
+  background: #333;
+  color: #fff;
 }
-.next:hover {
-  color: white !important;
-  background-color: #7f8fa6;
-  opacity: 80%;
-  transition: 0.5s;
-}
-.previous :hover {
-  color: white !important;
-  background-color: #7f8fa6;
-  opacity: 80%;
-  transition: 0.5s;
-}
-.current {
-  background-color: #f5f6fa !important;
-  color: black !important ;
-  opacity: 80%;
-}
-.plink {
-  background-color: none !important;
-  color: white !important ;
-  opacity: 80%;
+.paginationBody li p {
+  padding: 3px 6px 3px 6px;
 }
