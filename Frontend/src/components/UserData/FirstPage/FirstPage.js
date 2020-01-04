@@ -12,7 +12,7 @@ import Day5 from './Calenderbody/Day5';
 import Day6 from './Calenderbody/Day6';
 import Day7 from './Calenderbody/Day7';
 // import Columns from "./columns";
-import '../../FirstPage/FirstPage.css';
+// import '../../FirstPage/FirstPage.css';
 
 export default function FirstPage() {
   return (
