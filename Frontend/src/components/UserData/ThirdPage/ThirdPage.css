@@ -1,0 +1,48 @@
+.ThirdPageContainer {
+  display: flex;
+  position: fixed;
+  width: 71%;
+  height: 91%;
+  flex-wrap: wrap;
+  top: 5%;
+  left: 27%;
+  border-radius: 15px;
+}
+.tableheader {
+  padding-bottom: 5px !important;
+  padding-top: 5px !important;
+  text-align: center;
+}
+.tg-0pky {
+  text-align: center !important;
+  color: #353b48;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.borderRad {
+  border: 0px !important;
+  border-radius: 15px 0px 0px 0px;
+}
+.borderRadleft {
+  border-radius: 0px 15px 0px 0px;
+}
+.noBoder {
+  border: none !important;
+  background-color: white !important;
+  display: block;
+}
+.tablemain {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 9.3px;
+}
+
+.lighterRow {
+  background-color: #f5f6fa;
+}
+.totore {
+  background-color: rgb(248, 237, 220);
+  opacity: 90%;
+}

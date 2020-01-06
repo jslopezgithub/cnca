@@ -24,7 +24,7 @@ export default class Login extends Component {
                 <input type='checkbox' />
               </span>
               <p className='Resta'>Resta collegato</p>
-              <Link to='./home'>
+              <Link to='./home/firstpage'>
                 <button className='btn'>ACCESSO</button>
               </Link>
               {/* ------------------------------Forget password  & Registration Links */}
