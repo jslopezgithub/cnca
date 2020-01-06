@@ -28,6 +28,7 @@ export default class InputIntry extends Component {
           className='inputa editview'
           ref='theTextInput'
         />
+<<<<<<< HEAD
         <button
           title='Annulla'
           className='xclick'
@@ -40,6 +41,12 @@ export default class InputIntry extends Component {
           className='yesclick'
           onClick={this.updateComponentValue}
         >
+=======
+        <button className='xclick' onClick={this.changeEditMode}>
+          <p>X</p>
+        </button>
+        <button className='yesclick' onClick={this.updateComponentValue}>
+>>>>>>> d7413d682f6b74d4bdc07291a258ee782aa7ba8b
           <p>✓</p>
         </button>
       </div>
