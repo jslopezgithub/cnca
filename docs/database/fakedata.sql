@@ -2,6 +2,22 @@ use cnca;
 INSERT INTO roles (nome) 
 VALUES ("owner"), ("admin"), ("user");
 
+-- this date isn't fake
+INSERT into holidays (holiday, is_continious)
+-- YEAR/MONTH/DAY
+VALUES  ('2020/1/1', true),
+('2020/1/6'  , true),
+('2020/4/25' , true),
+('2020/5/1'  , true),
+('2020/6/2'  , true),
+('2020/8/15' , true),
+('2020/11/1' , true),
+('2020/12/8' , true),
+('2020/12/25', true),
+('2020/12/26', true),
+('2020/12/21', true),
+('2020/5/9'  , false), -- TEST
+('2020/10/15', false); -- TEST
 
 -- CREATE DEFAULT ACTIVITY TYPES
 INSERT INTO activity_types(nome)  
