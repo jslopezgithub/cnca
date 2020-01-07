@@ -23,30 +23,15 @@ export default class InputIntry extends Component {
     return (
       <div>
         <input
-          type='text'
+          type="text"
           defaultValue={this.state.value}
-          className='inputa editview'
-          ref='theTextInput'
+          className="inputa editview"
+          ref="theTextInput"
         />
-<<<<<<< HEAD
-        <button
-          title='Annulla'
-          className='xclick'
-          onClick={this.changeEditMode}
-        >
+        <button className="xclick" onClick={this.changeEditMode}>
           <p>X</p>
         </button>
-        <button
-          title='Salva'
-          className='yesclick'
-          onClick={this.updateComponentValue}
-        >
-=======
-        <button className='xclick' onClick={this.changeEditMode}>
-          <p>X</p>
-        </button>
-        <button className='yesclick' onClick={this.updateComponentValue}>
->>>>>>> d7413d682f6b74d4bdc07291a258ee782aa7ba8b
+        <button className="yesclick" onClick={this.updateComponentValue}>
           <p>✓</p>
         </button>
       </div>
@@ -56,11 +41,11 @@ export default class InputIntry extends Component {
   rederDefaultView = () => {
     return (
       <input
-        type='text'
+        type="text"
         onDoubleClick={this.changeEditMode}
         value={this.state.value}
-        className='inputa'
-        placeholder='Digitare qui...'
+        className="inputa"
+        placeholder="Digitare qui..."
       />
     );
   };

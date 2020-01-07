@@ -25,11 +25,7 @@
   overflow: hidden;
   font-style: italic;
   color: #353b48;
-<<<<<<< HEAD
   font-size: medium;
-=======
-  font-size: small;
->>>>>>> d7413d682f6b74d4bdc07291a258ee782aa7ba8b
   margin-bottom: 3px;
 }
 .xclick,
@@ -58,11 +54,7 @@
 
 .editview {
   border: green solid 2px;
-<<<<<<< HEAD
   background-color: #f5faaa;
-=======
-  background-color: #f9fcce;
->>>>>>> d7413d682f6b74d4bdc07291a258ee782aa7ba8b
 }
 .userinfo p {
   margin: 4px 0px 1px 0px;

@@ -1,6 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+// eslint-disable-next-line import/no-named-as-default-member
 import InputIntry from './InputIntry';
 import Pagination from './Pagination';
 import './UserInfo.css';
@@ -10,9 +11,9 @@ import UserImg from './UserImg';
 export default class UserInfo extends Component {
   render() {
     return (
-      <div className='maincontainer'>
+      <div className="maincontainer">
         <UserImg />
-        <span className='userinfo'>
+        <span className="userinfo">
           <p>NOME</p>
           <InputIntry />
           <p>COGNOME</p>

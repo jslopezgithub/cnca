@@ -65,7 +65,7 @@
 
 .registerbtn button {
   border: none;
-  position: absolute;
+  position: relative;
   top: 80%;
   left: 22.5%;
   width: 48%;
