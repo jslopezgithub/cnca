@@ -5,14 +5,14 @@ export default function UserName() {
   const FirstName = 'First name';
   const SecondName = 'SecondName';
   return (
-    <div className='UserName'>
-      <div className='calender'>
-        <i className='fas fa-calendar-alt calenderIcon'></i>
+    <span className="UserName">
+      <div className="calender">
+        <i className="fas fa-calendar-alt calenderIcon"></i>
       </div>
-      <div className='nameInput'>
+      <span className="nameInput">
         <span>{FirstName}</span>
         <span>{SecondName}</span>
-      </div>
-    </div>
+      </span>
+    </span>
   );
 }

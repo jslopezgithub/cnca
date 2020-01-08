@@ -16,24 +16,23 @@ export default function FirstPage() {
       <TotalHours />
       <TotalTime>Hello from total time</TotalTime>
 
-      {/* // <Columns /> */}
       <div className="block">
         <nav className="pagination is-rounded is-small">
-          <a href="" className="pagination-previous pevious" disabled>
+          <a href="#" className="pagination-previous pevious" disabled>
             Previous
           </a>
-          <a href="" className="pagination-next is-danger next">
+          <a href="#" className="pagination-next is-danger next">
             Next Page
           </a>
           <ul className="pagination-list listnumber content is-small">
             <li>
-              <a href="" className="pagination-link is-current">
+              <a href="#" className="pagination-link is-current">
                 1
               </a>
-              <a href="" className="pagination-link">
+              <a href="#" className="pagination-link">
                 2
               </a>
-              <a href="" className="pagination-link">
+              <a href="#" className="pagination-link">
                 3
               </a>
             </li>

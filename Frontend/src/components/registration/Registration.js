@@ -16,7 +16,6 @@ class Registration extends Component {
   }
 
   UpdateState = e => {
-    // console.log(e);
     this.setState({ ...this.state, [e.target.name]: [e.target.value] });
     // console.log(this.state);
   };
