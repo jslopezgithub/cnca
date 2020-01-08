@@ -12,17 +12,17 @@ import Day5 from './Calenderbody/Day5';
 import Day6 from './Calenderbody/Day6';
 import Day7 from './Calenderbody/Day7';
 // import Columns from "./columns";
-// import '../../FirstPage/FirstPage.css';
+import '../../FirstPage/FirstPage.css';
 
 export default function FirstPage() {
   return (
-    <div className="FirstPage">
+    <div className='FirstPage'>
       <TotalHours />
       <UserName />
       <TotalTime />
-      <div className="daystyling"></div>
-      <div className="ingressobox">INGRESSO</div>
-      <div className="uscitabox">USCITA</div>
+      <div className='daystyling'></div>
+      <div className='ingressobox'>INGRESSO</div>
+      <div className='uscitabox'>USCITA</div>
       <Day1 />
       <Day2 />
       <Day3 />

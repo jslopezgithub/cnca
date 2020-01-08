@@ -4,9 +4,9 @@
   display: flex;
   flex-wrap: wrap;
   height: 60px;
-  width: 220px;
-
-  border-radius: 0px 15px 15px 0px;
+  width: 360px;
+  left: 7%;
+  border-radius: 0px 0px 15px 15px;
 }
 .nameInput {
   margin-top: 2px;
@@ -18,13 +18,12 @@
   width: 50px;
   height: 60px;
 }
-.calenderIcon {
+
+.date-picker {
   position: relative;
-  overflow: hidden;
-  top: 9px;
-  left: 5px;
-  color: white;
-  font-size: 40px;
+  right: 190%;
+  top: 15%;
+  border-radius: 10px !important;
 }
 .calenderIcon:hover {
   position: relative;
@@ -42,9 +41,10 @@
   position: relative;
   border: none;
   top: 7%;
+  left: 3%;
   width: 165px;
   height: 20px;
-  border-radius: 0px 10px 10px 0px;
+  border-radius: 10px;
   margin: 3px 0px 1px 0px;
   text-align: center;
   padding-left: 10px;
