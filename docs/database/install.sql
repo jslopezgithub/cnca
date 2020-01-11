@@ -55,13 +55,13 @@ CREATE TABLE `users` (
 CREATE TABLE `activity_types` (
   `id`      int(11) NOT NULL AUTO_INCREMENT,
   `nome`    varchar(128) DEFAULT NULL,
-    PRIMARY KEY (`id`)
+   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE `activities` (
   `id` 							        int(11)         NOT NULL AUTO_INCREMENT,
   `volunteer_id` 				    int(11)         NOT NULL,
-  `activity_date` 				  date DEFAULT    NOT NULL,
+  `activity_date` 				  date 				NOT NULL,
   `start_time`  				    time            NOT NULL,
   `end_time`    				    time            NOT NULL,
   `activity_type_id` 			  int(11)         NOT NULL,
@@ -86,4 +86,3 @@ CREATE TABLE `users_tokens` (
   KEY `user_token_owner` (`user_id`),
   CONSTRAINT `user_token_owner` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-

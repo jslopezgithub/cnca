@@ -34,6 +34,7 @@ function getId(id, res) {
 }
 
 function createType(activityName, res) {
+   
   db.insert({ nome: activityName })
     .into(table.tableName)
     .then(() => {

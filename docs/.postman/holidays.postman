@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "41f78f8e-c05a-4715-b89b-d2b0a34675ce",
+		"name": "holidays",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "gets holiday with id = 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/holidays?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"holidays"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "gets holiday by id"
+			},
+			"response": []
+		},
+		{
+			"name": "creates holiday",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Saint Giovani Day",
+							"type": "text"
+						},
+						{
+							"key": "holiday",
+							"value": "2020-12-20",
+							"type": "text"
+						},
+						{
+							"key": "continuous",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/api/holidays",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"holidays"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "San Giovani day",
+							"disabled": true
+						},
+						{
+							"key": "continuous",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "sholiday",
+							"value": "2020-12-16",
+							"disabled": true
+						}
+					]
+				},
+				"description": "creates holiday"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Holiday",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "13",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/api/holidays",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"holidays"
+					]
+				},
+				"description": "Deletes the holiday"
+			},
+			"response": []
+		},
+		{
+			"name": "is holiday?",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/holidays?find=2019-01-44",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"holidays"
+					],
+					"query": [
+						{
+							"key": "find",
+							"value": "2019-01-44"
+						}
+					]
+				},
+				"description": "Detect holiday is holiday"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

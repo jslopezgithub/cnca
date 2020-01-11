@@ -9,9 +9,7 @@ module.exports = knex({
     password: '12204900',
     database: 'cnca'
   }
-
 });
-
 
 module.exports.raw = {
   host: 'localhost',
