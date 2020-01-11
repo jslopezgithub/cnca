@@ -1,51 +1,47 @@
 const db = require('../../api/connection');
 
 function deleteById(id, res) {
-
-    db
+  db
     .delete()
     .from('users')
-    .where({ id: id })
-    
-    .then(function(data) {
-        res.send({ message: "OK", description: "DELETED" });
+    .where({ id })
+
+    .then(() => {
+      res.send({ message: 'OK', description: 'DELETED' });
     })
 
-    .catch(function(err) {
-        res.send({ message: "ERR" });
+    .catch(() => {
+      res.send({ message: 'ERR' });
     });
-
 }
 
 function getById(id, res) {
-
-    db
+  db
     .select()
     .from('users')
-    .where({ id: id })
-    
-    .then(function(data) {
-        res.send(data);
+    .where({ id })
+
+    .then((data) => {
+      res.send(data);
     })
 
-    .catch(function(err) {
-        res.send({ message: "ERR" });
+    .catch((err) => {
+      res.send({ message: 'ERR' });
     });
-
 }
 
 function getByEmail(email, res) {
-    db
+  db
     .select()
     .from('users')
-    .where({ email: email })
-    
-    .then(function(data) {
-        res.send(data);
+    .where({ email })
+
+    .then((data) => {
+      res.send(data);
     })
 
-    .catch(function(err) {
-        res.send({ message: "ERR" });
+    .catch((err) => {
+      res.send({ message: 'ERR' });
     });
 }
 
@@ -79,15 +75,13 @@ module.exports = (req, res, next) => {
   switch (req.method) {
     // eslint-disable-next-line no-lone-blocks
     case 'GET': {
-      
-        if (req.query.find === codiceFisicale) {
-            name = req.query.name;
-            // eslint-disable-next-line no-undef
-            surname = req.query.surname;
+      if (req.query.find === codiceFisicale) {
+        name = req.query.name;
+        // eslint-disable-next-line no-undef
+        surname = req.query.surname;
 
-            getUserByCodiceFisicale(name, surname, res);
-        }
-
+        getUserByCodiceFisicale(name, surname, res);
+      }
     } break;
 
     case 'POST': {
@@ -95,19 +89,16 @@ module.exports = (req, res, next) => {
     } break;
 
     case 'DELETE': {
+      console.log('deleting user');
 
-        console.log('deleting user');
+      if (req.body.id) {
+        deleteById(req.body.id, res);
+        return;
+      }
 
-        if(req.body.id) {
-            deleteById(req.body.id, res);
-                return;
-        }
-
-        req.send({ message: "ERROR", description: "ID is required" });
-
-
+      req.send({ message: 'ERROR', description: 'ID is required' });
     } break;
 
-      default: res.send('yes');
-    } 
+    default: res.send('yes');
+  }
 };

@@ -70,7 +70,7 @@ function deleteType(_id, res) {
 }
 
 
-const typeApi = (req, res, next) => {
+const typeApi = (req, res) => {
   switch (req.method) {
     case 'GET': {
       if (!req.query.id) {
