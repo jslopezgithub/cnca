@@ -1,16 +1,19 @@
-/* eslint-disable react/react-in-jsx-scope */
-import React, { Component } from 'react';
-// eslint-disable-next-line import/prefer-default-export
-export class ForgotenPass extends Component {
-  // eslint-disable-next-line class-methods-use-this
-  render() {
-    return (
-      // eslint-disable-next-line react/react-in-jsx-scope
-      <div>
-        {/* // eslint-disable-next-line react/react-in-jsx-scope */}
-        <h1>Form For Forgoten Password</h1>
+import React from 'react';
+import './ForgotenPass.css';
+
+export default function ForgotenPass() {
+  return (
+    <div id='mainContainer'>
+      <div className='body'>
+        <div className='dataBox'>
+          <span className='inputs'>
+            <input type='text' placeholder='E-Mail'></input>
+          </span>
+          <span className='passworbtn'>
+            <button>ottenere una nuova password</button>
+          </span>
+        </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
-export default ForgotenPass;

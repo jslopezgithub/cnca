@@ -1,81 +1,81 @@
-/* eslint-disable class-methods-use-this */
-/* eslint-disable react/react-in-jsx-scope */
 import React, { Component } from 'react';
-// eslint-disable-next-line import/prefer-default-export
-import 'font-awesome/css/font-awesome.min.css';
-import 'bulma/css/bulma.css';
+import './Registration.css';
+import Register from '../../UserInfo-service';
 
 class Registration extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      Nome: '',
+      Cognome: '',
+      Email: '',
+      Password: '',
+      RipetiPassword: ''
+    };
+  }
+
+  UpdateState = e => {
+    this.setState({ ...this.state, [e.target.name]: [e.target.value] });
+    // console.log(this.state);
+  };
+
+  handleOnsubmit = e => {
+    e.preventDefault();
+    Register(this.state);
+  };
+
   render() {
     return (
-      // eslint-disable-next-line react/react-in-jsx-scope
-      <div>
-        {/* // eslint-disable-next-line react/react-in-jsx-scope */}
+      <div id='registrationContainer'>
+        <div className='registrationBody'>
+          <form className='regesrdataBox' onSubmit={this.handleOnsubmit}>
+            <div className='registerRightSide'>
+              <span className='inputs'>
+                <input
+                  type='text'
+                  placeholder='Nome'
+                  name='Nome'
+                  value={this.state.Nome}
+                  onChange={this.UpdateState}
+                ></input>
+                <input
+                  type='text'
+                  placeholder='Cognome'
+                  name='Cognome'
+                  value={this.state.Cognome}
+                  onChange={this.UpdateState}
+                ></input>
+                <input
+                  type='text'
+                  placeholder='E-mail'
+                  name='Email'
+                  value={this.state.Email}
+                  onChange={this.UpdateState}
+                ></input>
+                <input
+                  type='password'
+                  placeholder='Password'
+                  name='Password'
+                  value={this.state.Password}
+                  onChange={this.UpdateState}
+                ></input>
 
-        <section className="hero is-medium ">
-          <div className="box ">
-            <div className="columns is-centered ">
-              <div className="column is-half">
-                <div className="field">
-                  <label className="label has-text-centered">
-                    Registration Form
-                  </label>
-                  {/* <div className="control">
-                    <input
-                      className="input"
-                      type="text"
-                      placeholder="Text input"
-                    />
-                  </div> */}
-                </div>
-
-                <div className="field">
-                  <label className="label">Username</label>
-                  <div className="control has-icons-left has-icons-right">
-                    <input
-                      className="input is-success"
-                      type="text"
-                      placeholder="Text input"
-                    />
-                    <span className="icon is-small is-left">
-                      <i className="fa fa-user"></i>
-                    </span>
-                    <span className="icon is-small is-right">
-                      <i className="fa fa-check"></i>
-                    </span>
-                  </div>
-                </div>
-
-                <div className="field">
-                  <label className="label">Email</label>
-                  <div className="control has-icons-left has-icons-right">
-                    <input
-                      className="input is-danger"
-                      type="email"
-                      placeholder="Email input"
-                    />
-                    <span className="icon is-small is-left">
-                      <i className="fa fa-envelope"></i>
-                    </span>
-                    <span className="icon is-small is-right">
-                      <i className="fa fa-exclamation-triangle"></i>
-                    </span>
-                  </div>
-                  <p className="help is-danger">This email is invalid</p>
-                </div>
-
-                <div className="field is-grouped">
-                  <div className="control">
-                    <button className="button is-link">Submit</button>
-                  </div>
-                  <div className="control">
-                    <button className="button is-link is-light">Cancel</button>
-                  </div>
-                </div>
-              </div>
+                <input
+                  type='password'
+                  placeholder='Ripeti Password'
+                  name='RipetiPassword'
+                  onChange={this.UpdateState}
+                  value={this.state.RipetiPassword}
+                ></input>
+              </span>
             </div>
-          </div>
-        </section>
+            <span className='registerbtn'>
+              <button> Iscriviti</button>
+            </span>
+            <div className='sideBox'>//empty div for styling only</div>
+          </form>
+        </div>
       </div>
     );
   }

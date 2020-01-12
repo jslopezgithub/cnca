@@ -13,6 +13,7 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
   },
+  parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -25,7 +26,8 @@ module.exports = {
     'no-console': 'off',
     'arrow-parens': 'off',
     'consistent-return': 'off',
-    'import/no-named-as-default': 0
+    'import/no-named-as-default': 0,
+    'implicit-arrow-linebreak': 'off'
   },
   settings: {
     react: {

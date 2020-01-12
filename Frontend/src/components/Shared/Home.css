@@ -1,0 +1,11 @@
+.Home {
+  display: flex;
+  position: absolute;
+  background-color: #f5f6fa;
+  width: 71%;
+  height: 91%;
+  flex-wrap: wrap;
+  top: 1.5%;
+  left: 27%;
+  border-radius: 15px;
+}

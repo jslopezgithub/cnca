@@ -1,0 +1,19 @@
+.UserImg {
+  position: relative;
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  top: 3%;
+  left: 38%;
+  overflow: hidden;
+  color: #dcdde1;
+}
+
+.UserImg:hover:before {
+  transform: scale(1.1);
+}
+.UserImg:hover {
+  color: white;
+
+  cursor: pointer;
+}

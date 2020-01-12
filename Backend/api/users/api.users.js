@@ -82,7 +82,6 @@ module.exports = (req, res, next) => {
 
         getUserByCodiceFisicale(name, surname, res);
       }
-
       else if(req.query.find === 'id') {
 
       }

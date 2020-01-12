@@ -1,0 +1,71 @@
+#mainContainer {
+  display: flex;
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+}
+.body {
+  background-image: linear-gradient(
+    to top,
+    lightgrey 0%,
+    lightgrey 1%,
+    #e0e0e0 26%,
+    #efefef 48%,
+    #d9d9d9 75%,
+    #bcbcbc 100%
+  );
+  background-blend-mode: normal, multiply;
+  position: relative;
+  width: 70%;
+  left: 15%;
+}
+.dataBox {
+  position: relative;
+  background-size: cover;
+  left: 28%;
+  top: 27%;
+  width: 45%;
+  height: 40%;
+  background-color: #2f3640;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.inputs {
+  display: grid;
+  position: relative;
+  top: 15%;
+  left: 15%;
+  width: 70%;
+  overflow: hidden;
+}
+.inputs input {
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  margin-top: 10px;
+  color: #353b48;
+  font-size: 16px;
+  overflow: hidden;
+  text-align: center;
+  border: gray solid 1px;
+  font-style: italic;
+}
+
+.passworbtn button {
+  border: none;
+  position: absolute;
+  top: 60%;
+  left: 15%;
+  width: 70%;
+  height: 40px;
+  font-size: 16px;
+  color: white;
+  background-color: #0097e6;
+  font-style: italic;
+  border-radius: 20px;
+}
+.passworbtn button:hover {
+  cursor: pointer;
+  background-color: #6ab7e0;
+
+  transition: 0.5s;
+}

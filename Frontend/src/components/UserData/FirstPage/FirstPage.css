@@ -1,0 +1,41 @@
+.FristPage {
+  display: flex;
+  position: absolute;
+  width: 71%;
+  height: 81%;
+  flex-wrap: wrap;
+  top: 2%;
+  left: 27%;
+  border-radius: 15px;
+}
+.daystyling {
+  position: absolute;
+  left: 9.5%;
+  top: 12%;
+  background-color: #487eb0;
+  width: 13%;
+  height: 64%;
+  border-radius: 15px;
+}
+.ingressobox {
+  position: absolute;
+  left: 44%;
+  top: 9%;
+  background-color: #487eb0;
+  width: 91px;
+  height: 50px;
+  border-radius: 15px 15px 0px 0px;
+  text-align: center;
+  color: white;
+}
+.uscitabox {
+  position: absolute;
+  left: 55%;
+  top: 9%;
+  background-color: #487eb0;
+  width: 91px;
+  height: 50px;
+  border-radius: 15px 15px 0px 0px;
+  text-align: center;
+  color: white;
+}

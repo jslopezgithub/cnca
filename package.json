@@ -13,7 +13,11 @@
     "lint:fix": "eslint  --fix .",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "npm install --no-optional --prefix Frontend && npm run build --prefix Frontend",
-    "clean": "rm -rf node_modules Frontend/node_modules"
+    "clean": "rm -rf node_modules Frontend/node_modules",
+    "up-db": "docker-compose up -d",
+    "down-db": "docker-compose down",
+    "start-db": "docker-compose start",
+    "stop-db": "docker-compose stop"
   },
   "author": "",
   "license": "ISC",

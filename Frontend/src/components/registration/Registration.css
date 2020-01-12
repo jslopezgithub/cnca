@@ -1,0 +1,81 @@
+#registrationContainer {
+  display: flex;
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+}
+.registrationBody {
+  background-image: linear-gradient(
+    to top,
+    lightgrey 0%,
+    lightgrey 1%,
+    #e0e0e0 26%,
+    #efefef 48%,
+    #d9d9d9 75%,
+    #bcbcbc 100%
+  );
+  background-blend-mode: normal, multiply;
+
+  position: relative;
+  width: 70%;
+  left: 15%;
+}
+
+.regesrdataBox {
+  position: relative;
+  background-size: cover;
+  left: 10%;
+  width: 80%;
+  height: 100%;
+  background-color: #2f3640;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.sideBox {
+  height: 100%;
+  width: 35%;
+  background-image: url('../../Images/sideboximg.jpg');
+  background-size: cover;
+  opacity: 40%;
+  background-color: #2f3640;
+}
+.registerRightSide {
+  position: relative;
+  top: -8%;
+  width: 90%;
+  height: 100%;
+  float: right;
+  left: 12%;
+}
+.registerRightSide input {
+  display: grid;
+  position: relative;
+  left: 10%;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  margin-top: 30px;
+  color: #353b48;
+  font-size: 16px;
+  overflow: hidden;
+  text-align: center;
+  border: gray solid 1px;
+  font-style: italic;
+  width: 70%;
+}
+
+.registerbtn button {
+  border: none;
+  position: absolute;
+  top: 75%;
+  left: 42.5%;
+  width: 43%;
+  height: 35px;
+  font-size: 24px;
+  color: white;
+  background-color: #0097e6;
+}
+.registerbtn :hover {
+  cursor: pointer;
+  background-color: #6ab7e0;
+  transition: 0.5s;
+}

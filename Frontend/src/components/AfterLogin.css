@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.afterloginsizing {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-image: url('../Images/hero.jpg');
+  background-size: cover;
+}
