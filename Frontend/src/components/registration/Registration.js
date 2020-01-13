@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Registration.css';
+
 import Register from '../../UserInfo-service';
 
 class Registration extends Component {
@@ -27,53 +28,53 @@ class Registration extends Component {
 
   render() {
     return (
-      <div id='registrationContainer'>
-        <div className='registrationBody'>
-          <form className='regesrdataBox' onSubmit={this.handleOnsubmit}>
-            <div className='registerRightSide'>
-              <span className='inputs'>
+      <div id="registrationContainer">
+        <div className="registrationBody">
+          <form className="regesrdataBox" onSubmit={this.handleOnsubmit}>
+            <div className="registerRightSide">
+              <span className="inputs">
                 <input
-                  type='text'
-                  placeholder='Nome'
-                  name='Nome'
+                  type="text"
+                  placeholder="Nome"
+                  name="Nome"
                   value={this.state.Nome}
                   onChange={this.UpdateState}
                 ></input>
                 <input
-                  type='text'
-                  placeholder='Cognome'
-                  name='Cognome'
+                  type="text"
+                  placeholder="Cognome"
+                  name="Cognome"
                   value={this.state.Cognome}
                   onChange={this.UpdateState}
                 ></input>
                 <input
-                  type='text'
-                  placeholder='E-mail'
-                  name='Email'
+                  type="text"
+                  placeholder="E-mail"
+                  name="Email"
                   value={this.state.Email}
                   onChange={this.UpdateState}
                 ></input>
                 <input
-                  type='password'
-                  placeholder='Password'
-                  name='Password'
+                  type="password"
+                  placeholder="Password"
+                  name="Password"
                   value={this.state.Password}
                   onChange={this.UpdateState}
                 ></input>
 
                 <input
-                  type='password'
-                  placeholder='Ripeti Password'
-                  name='RipetiPassword'
+                  type="password"
+                  placeholder="Ripeti Password"
+                  name="RipetiPassword"
                   onChange={this.UpdateState}
                   value={this.state.RipetiPassword}
                 ></input>
               </span>
             </div>
-            <span className='registerbtn'>
-              <button> Iscriviti</button>
+            <span className="registerbtn">
+              <button type="submit"> Iscriviti</button>
             </span>
-            <div className='sideBox'>//empty div for styling only</div>
+            <div className="sideBox"></div>
           </form>
         </div>
       </div>

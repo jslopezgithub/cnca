@@ -5,7 +5,8 @@ import SecondPage from './SecondPage/SecondPage';
 import ThirdPage from './ThirdPage/ThirdPage';
 import './UserData.css';
 
-export default function UserData() {
+export default function UserData(props) {
+  // console.log(props);
   return (
     <div>
       {/*  <Router>
@@ -13,7 +14,7 @@ export default function UserData() {
         <Route path='./home/riepilogo' component={SecondPage} />
       </Router> */}
       <Router>
-        <Route path="/home/firstpage" component={FirstPage} />
+        <Route path="/home/firstpage" render={() => <FirstPage {...props} />} />
         <Route path="/home/secondpage" component={SecondPage} />
         <Route path="/home/thirdpage" component={ThirdPage} />
       </Router>

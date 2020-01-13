@@ -1,31 +1,31 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-expressions */
 import React from 'react';
 import './Username.css';
-import Datepicker from './Datepicker';
+// import Datepicker from './Datepicker';
 
-export default function UserName() {
-  const FirstName = 'First name';
-  const SecondName = 'SecondName';
+export default function UserName(props) {
+  console.log(props);
+  const { NOME, COGNOME } = props.userName;
+  // eslint-disable-next-line no-lone-blocks
+  // {
+  //   if (NOME) {
+  //     return NOME.toLowerCase()
+  //       .split()[0]
+  //       .toUperCase()
+  //       .join(' ');
+  //   }
+  // }
+  // NOME.toLowerCase()
+  //   .split()
   return (
-<<<<<<< HEAD
-    <span className="UserName">
-      <div className="calender">
-        <i className="fas fa-calendar-alt calenderIcon"></i>
+    <div className="UserName">
+      {/* <Datepicker /> */}
+      <div className="nameInput">
+        <span>First Name :{NOME}</span>
+        <span>Last Name :{COGNOME}</span>
       </div>
-      <span className="nameInput">
-||||||| merged common ancestors
-    <div className='UserName'>
-      <div className='calender'>
-        <i className='fas fa-calendar-alt calenderIcon'></i>
-      </div>
-      <div className='nameInput'>
-=======
-    <div className='UserName'>
-      <Datepicker />
-      <div className='nameInput'>
->>>>>>> 5776e0b67524ec26426dcaae7756ae1bcbd57443
-        <span>{FirstName}</span>
-        <span>{SecondName}</span>
-      </span>
-    </span>
+    </div>
   );
 }
