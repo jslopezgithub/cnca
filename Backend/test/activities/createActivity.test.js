@@ -1,15 +1,7 @@
-// const connect = require('../../db/connection');
+test('should create activity with user id = 1 and activity type = 2', () => {
+    
+});
 
-// test('should connect to database and take all of activities', () => {
-//   connect((q) => {
-//     const activityTypesModel = q.define('activity_types', {
-//       id: { type: 'serial', key: true }, // the auto-incrementing primary key
-//       nome: { type: 'text' }
-//     });
-
-//     activityTypesModel.all({ }, (err, data) => {
-//       expect(err).toBe(null);
-//       expect(data.length).toBe(10);
-//     });
-//   });
-// });
+test('should create 6 activities with user id = 1 and activity type = [2, 3, 5, 6, 7, 9]', () => {
+    
+});

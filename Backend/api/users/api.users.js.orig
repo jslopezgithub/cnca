@@ -6,11 +6,19 @@ function deleteById(id, res) {
     .from('users')
     .where({ id })
 
+<<<<<<< HEAD
     .then(() => {
       res.send({ message: 'OK', description: 'DELETED' });
     })
 
     .catch(() => {
+=======
+    .then((data) => {
+      res.send({ message: 'OK', description: 'DELETED' });
+    })
+
+    .catch((err) => {
+>>>>>>> dad11c2b186cdbb211772f4a6601f0bcaffb83ea
       res.send({ message: 'ERR' });
     });
 }
@@ -41,7 +49,11 @@ function getByEmail(email, res) {
     })
 
     .catch((err) => {
+<<<<<<< HEAD
       res.send({ message: 'ERR', description: err });
+=======
+      res.send({ message: 'ERR' });
+>>>>>>> dad11c2b186cdbb211772f4a6601f0bcaffb83ea
     });
 }
 
@@ -74,20 +86,30 @@ module.exports = (req, res, next) => {
 
   switch (req.method) {
     // eslint-disable-next-line no-lone-blocks
+<<<<<<< HEAD
     case 'GET': { 
+=======
+    case 'GET': {
+>>>>>>> dad11c2b186cdbb211772f4a6601f0bcaffb83ea
       if (req.query.find === codiceFisicale) {
         name = req.query.name;
         // eslint-disable-next-line no-undef
         surname = req.query.surname;
+<<<<<<< HEAD
 
         getUserByCodiceFisicale(name, surname, res);
       }
+
       else if(req.query.find === 'id') {
 
       }
 
 
+=======
+>>>>>>> dad11c2b186cdbb211772f4a6601f0bcaffb83ea
 
+        getUserByCodiceFisicale(name, surname, res);
+      }
     } break;
 
     case 'POST': {

@@ -34,9 +34,10 @@ function getId(id, res) {
 }
 
 function createType(activityName, res) {
+   
   db.insert({ nome: activityName })
     .into(table.tableName)
-    .then((data) => {
+    .then(() => {
       res.send({ message: 'OK' });
     })
 
@@ -56,7 +57,7 @@ function deleteType(_id, res) {
     .catch((err) => {
       console.log(err);
 
-      if (err.errno == 1451) {
+      if (err.errno === 1451) {
         res.send({
           message: 'DELETE_ERR',
           details: 'CONSTRAINT ERR: Activities depends on this activity type'
@@ -70,11 +71,9 @@ function deleteType(_id, res) {
 }
 
 
-const typeApi = (req, res, next) => {
+const typeApi = (req, res) => {
   switch (req.method) {
     case 'GET': {
-      console.log(req.query.id);
-
       if (!req.query.id) {
         getAll(res);
       }
