@@ -1,0 +1,24 @@
+const knex = require('knex');
+
+module.exports = knex({
+  client: 'mysql',
+
+  connection: {
+    host: 'localhost',
+<<<<<<< HEAD
+    user: 'root',
+    password: '12204900',
+=======
+    user: 'cnca',
+    password: 'cnca',
+>>>>>>> dad11c2b186cdbb211772f4a6601f0bcaffb83ea
+    database: 'cnca'
+  }
+});
+
+module.exports.raw = {
+  host: 'localhost',
+  user: 'root',
+  password: '12204900',
+  database: 'cnca'
+};
