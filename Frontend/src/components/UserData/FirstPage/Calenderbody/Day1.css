@@ -1,12 +1,27 @@
 .mainContainer1 {
+  width: fit-content;
+}
+.secondMainContainer {
   position: fixed;
   top: 27%;
   left: 34%;
-  width: 60%;
-  height: 55px;
+  width: 50%;
+  height: 35px;
   background-color: white;
   display: flex;
   border-radius: 290486px;
   border: #b2bec3 solid 1px;
   /* overflow: hidden; */
+}
+.select,
+.uscitap1,
+.timep1 {
+  border-radius: 290486px;
+}
+.select {
+  width: 100%;
+}
+.button.is-link {
+  border-radius: 290486px !important;
+  height: 35px;
 }

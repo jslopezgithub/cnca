@@ -1,5 +1,6 @@
 import React from 'react';
 import './ThirdPage.css';
+
 export default function ThirdPage() {
   return (
     <div className='ThirdPageContainer'>

@@ -12,7 +12,7 @@ const usersMiddleware = require('./Backend/api/users/api.users');
 
 const holidayMiddleware = require('./Backend/api/holidays/api.holidays');
 
-const activitiesMiddleware = require('./Backend/api/activities/api.activity')
+const activitiesMiddleware = require('./Backend/api/activities/api.activity');
 
 const PORT = process.env.PORT || 5000;
 

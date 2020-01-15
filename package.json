@@ -56,8 +56,6 @@
   },
   "test:nowatch": "CI=true react-scripts-ts test --env=jsdom",
   "husky": {
-    "hooks": {
-
-    }
+    "hooks": {}
   }
 }

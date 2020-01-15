@@ -33,7 +33,7 @@ export default class UserInfo extends Component {
     return (
       <form className="maincontainer">
         <UserImg />
-        <span className="userinfo">
+        <div className="userinfo">
           <p>NOME</p>
           {/* <InputIntry /> */}
           <input
@@ -108,7 +108,7 @@ export default class UserInfo extends Component {
               this.props.action(this.state)
             }
           />
-        </span>
+        </div>
 
         {/* <Pagination /> */}
       </form>

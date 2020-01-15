@@ -1,3 +1,5 @@
+/* eslint-disable no-unreachable */
+/* eslint-disable no-lone-blocks */
 const db = require('../connection');
 
 const table = {
@@ -10,11 +12,11 @@ function getAll(res) {
   return db
     .select()
     .from(table.tableName)
-    .then((data) => {
+    .then(data => {
       res.send(data);
     })
 
-    .catch((err) => {
+    .catch(err => {
       console.log(err);
     });
 }
@@ -24,37 +26,35 @@ function getId(id, res) {
     .select()
     .from(table.tableName)
     .where(table.idColumn, id)
-    .then((data) => {
+    .then(data => {
       res.send(data);
     })
 
-    .catch((err) => {
+    .catch(err => {
       console.log(err);
     });
 }
 
 function createType(activityName, res) {
-   
   db.insert({ nome: activityName })
     .into(table.tableName)
     .then(() => {
       res.send({ message: 'OK' });
     })
 
-    .catch((err) => {
+    .catch(err => {
       console.log(err);
     });
 }
 
 function deleteType(_id, res) {
-  db
-    .delete()
+  db.delete()
     .where({ id: _id })
     .from(table.tableName)
     .then(() => {
       res.send({ message: 'OK' });
     })
-    .catch((err) => {
+    .catch(err => {
       console.log(err);
 
       if (err.errno === 1451) {
@@ -70,29 +70,35 @@ function deleteType(_id, res) {
     });
 }
 
-
 const typeApi = (req, res) => {
   switch (req.method) {
-    case 'GET': {
-      if (!req.query.id) {
-        getAll(res);
+    case 'GET':
+      {
+        if (!req.query.id) {
+          getAll(res);
+        }
+
+        getId(req.query.id, res);
+        return;
       }
+      break;
 
-      getId(req.query.id, res);
-      return;
-    } break;
+    case 'POST':
+      {
+        console.log('posting');
 
-    case 'POST': {
-      console.log('posting');
+        createType(req.body.name, res);
+      }
+      break;
 
-      createType(req.body.name, res);
-    } break;
+    case 'DELETE':
+      {
+        deleteType(req.body.id, res);
+      }
+      break;
 
-    case 'DELETE': {
-      deleteType(req.body.id, res);
-    } break;
-
-    default: getAll(req.body.name, res);
+    default:
+      getAll(req.body.name, res);
   }
 
   // next();
