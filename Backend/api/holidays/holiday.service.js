@@ -18,8 +18,8 @@ function getAll() {
 
 function getById(id) {
   return db.select(['id', 'holiday', 'nome'])
-  .from('holidays')
-  .where({ id });
+    .from('holidays')
+    .where({ id });
 }
 
 function createHoliday(sholiday, continuous = 0, name = undefined) {

@@ -90,15 +90,14 @@ module.exports = (req, res, next) => {
 
   switch (req.method) {
     // eslint-disable-next-line no-lone-blocks
-    case 'GET': { 
+    case 'GET': {
       if (req.query.find === codiceFisicale) {
         name = req.query.name;
         // eslint-disable-next-line no-undef
         surname = req.query.surname;
 
         getUserByCodiceFisicale(name, surname, res);
-      }
-      else if(req.query.find === 'id') {
+      } else if (req.query.find === 'id') {
 
       }
     } break;

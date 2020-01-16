@@ -1,3 +1,5 @@
+/* eslint-disable no-unreachable */
+/* eslint-disable no-lone-blocks */
 const db = require('../connection');
 
 const tableName = 'activity_types'
@@ -10,10 +12,10 @@ function getAll(res) {
   return db
     .select('*')
     .from('activity_types')
-    .then((data) => {
+    .then(data => {
       res.send(data);
     })
-    .catch((err) => {
+    .catch(err => {
       console.log(err);
     });
 }
@@ -27,34 +29,31 @@ function getId(id, res) {
       res.send(data);
     })
 
-    .catch((err) => {
+    .catch(err => {
       console.log(err);
     });
 }
 
 function createType(activityName, res) {
-   
   db.insert({ nome: activityName })
     .into(tableName)
     .then(() => {
       res.send({ message: 'OK' });
     })
 
-    .catch((err) => {
+    .catch(err => {
       console.log(err);
     });
 }
 
 function deleteType(_id, res) {
-  db
-    .delete()
+  db.delete()
     .where({ id: _id })
     .from(tableName)
     .then(() => {
       res.send({ message: 'OK' });
     })
 
-    .catch((err) => {
       console.log(err);
 
       if (err.errno === 1451) {
@@ -72,32 +71,36 @@ function deleteType(_id, res) {
 
 
 
-
 module.exports  = (req, res) => {
 
   switch (req.method) {
-    case 'GET': {
+    case 'GET':
       
-      if (!req.query.id) {
+        if (!req.query.id) {
 
         
         return getAll(res);
       } else {
         return getId(req.query.id, res);
-      }
+        }
       
-    } break;
+      }
+      break;
 
-    case 'POST': {
-      console.log('posting');
+    case 'POST':
+      {
+        console.log('posting');
       return createType(req.body.name, res);
-    } break;
+      }
+      break;
 
-    case 'DELETE': {
+    case 'DELETE':
       return deleteType(req.body.id, res);
-    } break;
+      }
+      break;
 
     default: getAll(res);
+      getAll(req.body.name, res);
   }
 
   next();
