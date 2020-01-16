@@ -66,7 +66,6 @@ function deleteType(_id, res) {
       res.send({
         message: 'ERR'
       });
-    });
 }
 
 
@@ -74,33 +73,32 @@ function deleteType(_id, res) {
 module.exports  = (req, res) => {
 
   switch (req.method) {
-    case 'GET':
+    case 'GET': {
       
         if (!req.query.id) {
 
         
         return getAll(res);
-      } else {
+      } 
+      
+      else {
         return getId(req.query.id, res);
         }
       
-      }
-      break;
+      } break;
 
-    case 'POST':
-      {
+    case 'POST': {
         console.log('posting');
       return createType(req.body.name, res);
       }
       break;
 
-    case 'DELETE':
+    case 'DELETE':{
       return deleteType(req.body.id, res);
       }
       break;
 
-    default: getAll(res);
-      getAll(req.body.name, res);
+    default: getAll(req.body.name, res);
   }
 
   next();
