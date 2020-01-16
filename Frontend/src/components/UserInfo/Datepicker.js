@@ -1,30 +1,31 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import React from 'react';
-import DatePicker from 'react-datepicker';
+// import React from 'react';
+// import DatePicker from 'react-datepicker';
 
-import 'react-datepicker/dist/react-datepicker.css';
+// import 'react-datepicker/dist/react-datepicker.css';
 
-export default class Datepicker extends React.Component {
-  state = {
-    startDate: new Date()
-  };
+// export default class Datepicker extends React.Component {
+//   state = {
+//     startDate: new Date()
+//   };
 
-  handleChange = date => {
-    this.setState({
-      startDate: date
-    });
-  };
+//   handleChange = date => {
+//     this.setState({
+//       startDate: date
+//     });
+//     console.log(this.state);
+//   };
 
-  render() {
-    return (
-      <DatePicker
-        selected={this.state.startDate}
-        onChange={this.handleChange}
-        style={{ width: '15px !important' }}
-      />
-    );
-  }
-}
+//   render() {
+//     return (
+//       <DatePicker
+//         selected={this.state.startDate}
+//         onChange={this.handleChange}
+//         style={{ width: '15px !important' }}
+//       />
+//     );
+//   }
+// }
 
 // import React, { Component } from 'react';
 // import './UserInfo.css';

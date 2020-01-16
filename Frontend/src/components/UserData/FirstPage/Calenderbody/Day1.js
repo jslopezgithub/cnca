@@ -3,7 +3,10 @@
 import React, { Component } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import moment from 'moment';
-import Datepicker from '../../../UserInfo/Datepicker';
+import DatePicker from 'react-datepicker';
+
+import 'react-datepicker/dist/react-datepicker.css';
+
 import './Calenderbody.css';
 import './Day1.css';
 
@@ -11,6 +14,7 @@ export default class Day1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      start_date: new Date(),
       start_time: '',
       end_time: '',
       activity_type: ''
@@ -21,9 +25,15 @@ export default class Day1 extends Component {
     console.log(e);
     this.setState({
       ...this.state,
-      [e.target.name]: [e.target.value],
-      recived_data: this.props
+      [e.target.name]: [e.target.value]
     });
+  };
+
+  handleChangeTime = date => {
+    this.setState({
+      start_date: date
+    });
+    console.log(this.state);
   };
 
   handdleOnSubmit = e => {
@@ -54,7 +64,12 @@ export default class Day1 extends Component {
         {/* ______________________________ day */}
         <div className="secondMainContainer">
           <div className="field ">
-            <Datepicker />
+            <DatePicker
+              name="start_date"
+              selected={this.state.start_date}
+              onChange={this.handleChangeTime}
+              style={{ width: '15px !important' }}
+            />
           </div>
 
           {/* ______________________________ date */}
