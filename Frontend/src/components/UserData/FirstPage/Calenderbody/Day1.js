@@ -7,6 +7,7 @@ import DatePicker from 'react-datepicker';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
+import UserActivityLists from './UserActivityLists';
 import './Calenderbody.css';
 import './Day1.css';
 
@@ -111,7 +112,7 @@ export default class Day1 extends Component {
 
           {/* ----------------------------------------------------------------selezionare */}
           <div className="selezionare">
-            <div className="firstbox">
+            {/* <div className="firstbox">
               <div className="selectContainer">
                 <div className="control">
                   <div>
@@ -139,9 +140,10 @@ export default class Day1 extends Component {
                     </select>
                   </div>
                 </div>
-                {/* <p className="help is-success">Select your activity</p> */}
               </div>
             </div>
+          */}
+            <UserActivityLists />
           </div>
           <div className="control">
             {' '}
