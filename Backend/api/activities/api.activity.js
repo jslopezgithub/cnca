@@ -78,17 +78,18 @@ function createActivity(req, res) {
 
 
 module.exports = (req, res) => {
-
+    
     switch(req.method) {
 
         case 'GET': {
             return getUserActivities(req, res);
         }; break;
 
+        
         case 'POST': {
             return createActivity(req, res);
-
         }; break;
+
 
         case 'DELETE': {
 
@@ -100,6 +101,7 @@ module.exports = (req, res) => {
 
             return deleteActivity(id);
         }; break;
+
 
     }
 }

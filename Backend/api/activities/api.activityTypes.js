@@ -1,30 +1,29 @@
 const db = require('../connection');
 
-const table = {
-  tableName: 'activity_types',
-  nameColumn: 'nome',
-  idColumn: 'id'
-};
+const tableName = 'activity_types'
 
 function getAll(res) {
+
+  console.log(res.method);
+  
+
   return db
-    .select()
-    .from(table.tableName)
+    .select('*')
+    .from('activity_types')
     .then((data) => {
       res.send(data);
     })
-
     .catch((err) => {
       console.log(err);
     });
 }
 
 function getId(id, res) {
-  return db
-    .select()
-    .from(table.tableName)
-    .where(table.idColumn, id)
-    .then((data) => {
+
+  return db(tableName)
+    .select('*')
+    .where('id', id)
+    .then((data, err) => {
       res.send(data);
     })
 
@@ -36,7 +35,7 @@ function getId(id, res) {
 function createType(activityName, res) {
    
   db.insert({ nome: activityName })
-    .into(table.tableName)
+    .into(tableName)
     .then(() => {
       res.send({ message: 'OK' });
     })
@@ -50,10 +49,11 @@ function deleteType(_id, res) {
   db
     .delete()
     .where({ id: _id })
-    .from(table.tableName)
+    .from(tableName)
     .then(() => {
       res.send({ message: 'OK' });
     })
+
     .catch((err) => {
       console.log(err);
 
@@ -71,31 +71,35 @@ function deleteType(_id, res) {
 }
 
 
-const typeApi = (req, res) => {
+
+
+module.exports  = (req, res) => {
+
   switch (req.method) {
     case 'GET': {
+      
       if (!req.query.id) {
-        getAll(res);
-      }
 
-      getId(req.query.id, res);
-      return;
+        
+        return getAll(res);
+      } else {
+        return getId(req.query.id, res);
+      }
+      
     } break;
 
     case 'POST': {
       console.log('posting');
-
-      createType(req.body.name, res);
+      return createType(req.body.name, res);
     } break;
 
     case 'DELETE': {
-      deleteType(req.body.id, res);
+      return deleteType(req.body.id, res);
     } break;
 
-    default: getAll(req.body.name, res);
+    default: getAll(res);
   }
 
-  // next();
-};
+  next();
 
-module.exports = typeApi;
+};

@@ -1,6 +1,6 @@
 use cnca;
 INSERT INTO roles (name)
-VALUES ("owner"), ("admin"), ("user");
+VALUES ("admin"), ("volunteer");
 
 -- this date isn't fake
 INSERT into holidays (holiday, is_continious)
@@ -20,25 +20,25 @@ VALUES  ('2020-1-1', true),
 ('2020-10-15', false); -- TEST
 
 -- CREATE DEFAULT ACTIVITY TYPES
-INSERT INTO activity_types(nome)  
+INSERT INTO activity_types(nome, is_daily)  
 VALUES          -- id
-("attività1"),  -- 1
-("attività2"),  -- 2
-("attività3"),  -- 3
-("ferie"),      -- 4
-("malattia"),   -- 5
-("Recupero ore lavoro in festivo"),  -- 6
-("Formazione Generale"),             -- 7
-("Formazione Specifica"),            -- 8
-("Formazione FAD"),                  -- 9
-("PERMESSO str: donazione sangue"),  -- 10
-("PERMESSO str: diritto di voto"),   -- 11
-("PERMESSO str: testimone g"),       -- 12
-("PERMESSO str: seggio elettorale"); -- 13
+("attività1", 0),  -- 1
+("attività2", 0),  -- 2
+("attività3", 0),  -- 3
+("ferie", 0),      -- 4
+("malattia", 1),   -- 5
+("Recupero ore lavoro in festivo",  0), -- 6
+("Formazione Generale",             0), -- 7
+("Formazione Specifica",            0), -- 8
+("Formazione FAD",                  0), -- 9
+("PERMESSO str: donazione sangue",  0), -- 10
+("PERMESSO str: diritto di voto",   0), -- 11
+("PERMESSO str: testimone g",       0), -- 12
+("PERMESSO str: seggio elettorale", 0); -- 13
 
 INSERT INTO 
 users  (nome, cognome, data_di_nascita, organizzazione, email, password)
-VALUES ('Ramazan',  'Aliskhanov',   '1986-7-06',   'GreenVolunteers',          'social@gmail.com',      '1234567'), -- #1
+VALUES ('Ramazan',  'Aliskhanov',   '1986-7-06',   'GreenVolunteers',   'social@gmail.com',      '1234567'), -- #1
 ('Ahmad',    'Macsud',       '1983-8-05',   'RedCross Roma',            'ahmed@rcr.com',         '1234567'), -- #2
 ('Hlyal',    'Ibn Amin',     '1990-9-04',   'Doctors Without Borders',  'ramazan3@gmail.com',    '1234567'), -- #3
 ('Ramazan',  'Aliskhanov',   '1994-10-03',  'CYF Volunteer',            'ravillion@mail.com',    '1234567'), -- #4

@@ -5,7 +5,7 @@ module.exports = knex({
 
   connection: {
     host: 'localhost',
-    user: 'cnca',
+    user: 'root',
     password: '12204900',
     database: 'cnca'
   }
@@ -15,6 +15,6 @@ module.exports = knex({
 module.exports.raw = {
   host: 'localhost',
   user: 'root',
-  password: '',
+  password: '12204900',
   database: 'cnca'
 };

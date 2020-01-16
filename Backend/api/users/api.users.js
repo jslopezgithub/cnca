@@ -61,6 +61,22 @@ function getUserByCodiceFisicale(name, surname, res) {
     });
 }
 
+function createUser() {
+
+}
+
+function loginUser(email, password) {
+
+}
+
+function logOut(email) {
+
+}
+
+function changePassword(req, res) {
+
+}
+
 function getUserActivitiesWeek(id, res) {
 
 }
@@ -85,9 +101,6 @@ module.exports = (req, res, next) => {
       else if(req.query.find === 'id') {
 
       }
-
-
-
     } break;
 
     case 'POST': {
