@@ -72,8 +72,7 @@ export default class Day1 extends Component {
     const lists = UserActivity();
     console.log(lists);
     const totalTime = this.getTimeInterval(this.state);
-    // console.log(totalTime);
-    // const day = "MERCOLEDI'";
+
     return (
       <form className="mainContainer1" onSubmit={this.handleOnSubmit}>
         {/* ______________________________ day */}
