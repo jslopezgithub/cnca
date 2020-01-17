@@ -95,3 +95,6 @@
 .paginationBody li p {
   padding: 3px 6px 3px 6px;
 }
+.buttonClass {
+  display: flex;
+}

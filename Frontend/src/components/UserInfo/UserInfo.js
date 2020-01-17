@@ -97,17 +97,20 @@ export default class UserInfo extends Component {
             onChange={this.UpdateState}
           />
           {/* <InputIntry /> */}
-          <input
-            type="button"
-            className="inputa editview"
-            name="attività3"
-            value="Continue"
-            // disabled={!this.isFormValid}
-            onClick={() =>
-              // eslint-disable-next-line react/prop-types
-              this.props.action(this.state)
-            }
-          />
+          <div>
+            <input
+              type="button"
+              className="inputa editview"
+              name="attività3"
+              value="Continue"
+              style={{ backgroundColor: 'Blue', color: 'White' }}
+              // disabled={!this.isFormValid}
+              onClick={() =>
+                // eslint-disable-next-line react/prop-types
+                this.props.action(this.state)
+              }
+            />
+          </div>
         </div>
 
         {/* <Pagination /> */}

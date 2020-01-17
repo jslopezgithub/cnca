@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Registration.css';
 
-import Register from '../../UserInfo-service';
+// import Register from '../../UserInfo-service';
 
 class Registration extends Component {
   constructor(props) {
@@ -21,10 +21,10 @@ class Registration extends Component {
     // console.log(this.state);
   };
 
-  handleOnsubmit = e => {
-    e.preventDefault();
-    Register(this.state);
-  };
+  // handleOnsubmit = e => {
+  //   e.preventDefault();
+  //   Register(this.state);
+  // };
 
   render() {
     return (
