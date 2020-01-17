@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import moment from 'moment';
+// import axios from 'axios';
 import DatePicker from 'react-datepicker';
 
 import 'react-datepicker/dist/react-datepicker.css';
@@ -19,7 +20,8 @@ export default class Day1 extends Component {
       start_time: '',
       end_time: '',
       activity_type: '',
-      activity_type_id: ''
+      activity_type_id: '',
+      datas: ''
     };
   }
 
@@ -49,11 +51,17 @@ export default class Day1 extends Component {
     });
   };
 
+  // componentDidMount() {
+  //   return axios
+  //     .get('http://localhost:5000/api/activities/types')
+  //     .then(res => this.setState({ datas: res.data }));
+  // }
+
   handleOnSubmit = e => {
     e.preventDefault();
 
     console.log(this.state);
-    DaylyUserActivity(this.state);
+    DaylyUserActivity();
   };
 
   getTimeInterval = e => {
@@ -70,7 +78,7 @@ export default class Day1 extends Component {
 
   render() {
     const lists = UserActivity();
-    console.log(lists);
+    console.log(UserActivity());
     const totalTime = this.getTimeInterval(this.state);
 
     return (
