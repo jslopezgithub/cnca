@@ -3,12 +3,12 @@
 import React, { Component } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import moment from 'moment';
-// import axios from 'axios';
+import axios from 'axios';
 import DatePicker from 'react-datepicker';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
-import { UserActivity, DaylyUserActivity } from '../../../../UserInfo-service';
+// import { UserActivity, DaylyUserActivity } from '../../../../UserInfo-service';
 import './Calenderbody.css';
 import './Day1.css';
 
@@ -21,8 +21,15 @@ export default class Day1 extends Component {
       end_time: '',
       activity_type: '',
       activity_type_id: '',
-      datas: ''
+      datas: '',
+      loading: false
     };
+  }
+
+  componentDidMount() {
+    return axios
+      .get('http://localhost:5000/api/activities/types')
+      .then(res => this.setState({ datas: res.data, loading: true }));
   }
 
   handleOnChange = e => {
@@ -41,7 +48,7 @@ export default class Day1 extends Component {
   };
 
   handleOnSelectActivity = e => {
-    const jj = UserActivity()
+    const jj = this.state.datas
       .filter(milley => milley.name === e.target.value)
       .map(k => k.id);
     this.setState({
@@ -51,17 +58,11 @@ export default class Day1 extends Component {
     });
   };
 
-  // componentDidMount() {
-  //   return axios
-  //     .get('http://localhost:5000/api/activities/types')
-  //     .then(res => this.setState({ datas: res.data }));
-  // }
-
   handleOnSubmit = e => {
     e.preventDefault();
 
     console.log(this.state);
-    DaylyUserActivity();
+    // DaylyUserActivity();
   };
 
   getTimeInterval = e => {
@@ -77,8 +78,8 @@ export default class Day1 extends Component {
   };
 
   render() {
-    const lists = UserActivity();
-    console.log(UserActivity());
+    // const lists = UserActivity();
+    // console.log(UserActivity());
     const totalTime = this.getTimeInterval(this.state);
 
     return (
@@ -146,9 +147,13 @@ export default class Day1 extends Component {
                       // eslint-disable-next-line react/jsx-no-comment-textnodes
                     >
                       // eslint-disable-next-line valid-typeof
-                      {lists.map((e, i) => (
-                        <option key={i}>{e.name}</option>
-                      ))}
+                      {this.state.loading === true ? (
+                        this.state.datas.map((e, i) => (
+                          <option key={i}>{e.name}</option>
+                        ))
+                      ) : (
+                        <option>Loading....</option>
+                      )}
                     </select>
                   </div>
                 </div>

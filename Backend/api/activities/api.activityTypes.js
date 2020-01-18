@@ -70,7 +70,6 @@ module.exports = (req, res) => {
     case 'GET':
       {
         if (!req.query.id) {
-          res.setHeader('Access-Control-Allow-Origin', '*');
           return getAll(res);
         }
         return getId(req.query.id, res);
