@@ -119,10 +119,10 @@ export default class UserInfo extends Component {
           <div>
             <input
               type="submit"
-              className="inputa editview"
+              className="inputaSubmit"
               name="attività3"
               value="Continue"
-              style={{ backgroundColor: 'Blue', color: 'White' }}
+
               // disabled={!this.isFormValid}
             />
           </div>

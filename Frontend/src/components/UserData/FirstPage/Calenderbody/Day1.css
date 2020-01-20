@@ -5,7 +5,7 @@
   position: fixed;
   top: 27%;
   left: 34%;
-  width: 50%;
+  width: 54%;
   height: 35px;
   background-color: white;
   display: flex;
@@ -24,4 +24,7 @@
 .button.is-link {
   border-radius: 290486px !important;
   height: 35px;
+}
+.button.is-link:hover {
+  opacity: 0.9;
 }

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { getMessage } from './service';
 import './App.css';
 
-import Navbar from './components/Shared/Navbar';
+// import Navbar from './components/Shared/Navbar';
 import Footer from './components/Shared/Footer';
 import AfterLogin from './components/AfterLogin';
 import Login from './components/login/Login';
@@ -25,7 +25,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Navbar />
+          {/* <Navbar /> */}
           <Switch>
             <Route path="/" exact component={Login} />
             <Route path="/sign-up" component={Registration} />

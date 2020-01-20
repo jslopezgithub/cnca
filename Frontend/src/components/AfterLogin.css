@@ -5,9 +5,16 @@
 }
 
 .afterloginsizing {
+  display: flex;
   position: fixed;
   height: 100%;
   width: 100%;
   background-image: url('../Images/hero.jpg');
   background-size: cover;
+}
+.userInfo {
+  width: 30%;
+}
+.beforeAndAfter {
+  width: 70%;
 }

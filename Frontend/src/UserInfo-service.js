@@ -36,11 +36,10 @@ function DaylyUserActivity(data) {
 // // }
 
 function UserActivity() {
-  //   return axios
-  //     .get('http://localhost:5000/api/activities/types')
-  //     .then(res => console.log(res.data))
-  //     .catch(err => console.log(`oops ${err}`));
-  // }
+  // fetch('http://localhost:5000/api/activities/types')
+  //   .then(res => console.log(res))
+  //   .catch(err => console.log(`oops ${err}`));
+  // // }
   const lists = [
     { id: '1', name: 'attività1', is_daily: '0' },
     { id: '2', name: 'attività2', is_daily: '0' },

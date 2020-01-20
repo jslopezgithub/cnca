@@ -3,12 +3,12 @@
 import React, { Component } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import moment from 'moment';
-import axios from 'axios';
+// import axios from 'axios';
 import DatePicker from 'react-datepicker';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
-// import { UserActivity, DaylyUserActivity } from '../../../../UserInfo-service';
+import { UserActivity, DaylyUserActivity } from '../../../../UserInfo-service';
 import './Calenderbody.css';
 import './Day1.css';
 
@@ -21,16 +21,20 @@ export default class Day1 extends Component {
       end_time: '',
       activity_type: '',
       activity_type_id: '',
-      datas: '',
+      datas: [],
       loading: false
     };
   }
 
-  componentDidMount() {
-    return axios
-      .get('http://localhost:5000/api/activities/types')
-      .then(res => this.setState({ datas: res.data, loading: true }));
-  }
+  // componentDidMount() {
+  //   return axios
+  //     .get('http://localhost:5000/api/activities/types')
+  //     .then(res => this.setState({ datas: res.data, loading: true }))
+  //     .catch(err => {
+  //       // eslint-disable-next-line no-unused-expressions
+  //       `oops u got this ${err}`;
+  //     });
+  // }
 
   handleOnChange = e => {
     console.log(e);
@@ -48,7 +52,7 @@ export default class Day1 extends Component {
   };
 
   handleOnSelectActivity = e => {
-    const jj = this.state.datas
+    const jj = UserActivity()
       .filter(milley => milley.name === e.target.value)
       .map(k => k.id);
     this.setState({
@@ -56,13 +60,14 @@ export default class Day1 extends Component {
       [e.target.name]: [e.target.value],
       activity_type_id: jj
     });
+    console.log(jj);
   };
 
   handleOnSubmit = e => {
     e.preventDefault();
 
     console.log(this.state);
-    // DaylyUserActivity();
+    DaylyUserActivity(this.state);
   };
 
   getTimeInterval = e => {
@@ -78,8 +83,9 @@ export default class Day1 extends Component {
   };
 
   render() {
-    // const lists = UserActivity();
-    // console.log(UserActivity());
+    // console.log(this.state.datas);
+    const lists = UserActivity();
+    console.log(UserActivity());
     const totalTime = this.getTimeInterval(this.state);
 
     return (
@@ -147,13 +153,9 @@ export default class Day1 extends Component {
                       // eslint-disable-next-line react/jsx-no-comment-textnodes
                     >
                       // eslint-disable-next-line valid-typeof
-                      {this.state.loading === true ? (
-                        this.state.datas.map((e, i) => (
-                          <option key={i}>{e.name}</option>
-                        ))
-                      ) : (
-                        <option>Loading....</option>
-                      )}
+                      {lists.map((e, i) => (
+                        <option key={i}>{e.name}</option>
+                      ))}
                     </select>
                   </div>
                 </div>

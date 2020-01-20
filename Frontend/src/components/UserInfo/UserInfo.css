@@ -1,7 +1,7 @@
 .maincontainer {
   display: flex;
-  background-color: #353b48;
-  width: 25%;
+  background-image: url(../../Images/hero.jpg);
+  width: 28%;
   margin-left: 15px;
   height: 95%;
   position: fixed;
@@ -97,4 +97,16 @@
 }
 .buttonClass {
   display: flex;
+}
+.inputaSubmit {
+  font-size: 19px;
+  border-radius: 290486px;
+  margin-top: 20px;
+  height: 35px;
+  width: 95px;
+  background-color: #0261b9;
+  color: #fff;
+}
+.inputaSubmit:hover {
+  opacity: 0.9;
 }

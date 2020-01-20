@@ -1,7 +1,7 @@
 .Home {
   display: flex;
   position: absolute;
-  background-color: #f5f6fa;
+  /* background-image: url(../../Images/hero.jpg); */
   width: 71%;
   height: 91%;
   flex-wrap: wrap;

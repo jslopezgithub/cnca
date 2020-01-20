@@ -2,7 +2,8 @@ import React from 'react';
 
 export default function Navbar() {
   const style = {
-    backgroundColor: '#0097e6',
+    // eslint-disable-next-line no-undef
+    backgroundImage: `url(${'../../Images/CNCA-small-LOGO.png'})`,
     color: 'white',
     textAlign: 'center',
     fontWeight: 'bold',
@@ -11,9 +12,5 @@ export default function Navbar() {
     width: '-webkit-fill-available'
   };
 
-  return (
-    <div style={style} className='Navbar'>
-      LOGO PLACE HOLDER
-    </div>
-  );
+  return <div style={style} className="Navbar"></div>;
 }
