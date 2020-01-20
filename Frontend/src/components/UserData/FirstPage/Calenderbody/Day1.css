@@ -7,7 +7,7 @@
   left: 34%;
   width: 64%;
   height: 55px;
-  background-color: white;
+  background-color: rgb(250, 242, 242);
   display: flex;
   justify-content: space-between;
   border-radius: 10px 10px 10px 10px !important;
