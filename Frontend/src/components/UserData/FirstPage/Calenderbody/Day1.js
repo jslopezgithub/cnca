@@ -67,6 +67,8 @@ export default class Day1 extends Component {
     e.preventDefault();
 
     console.log(this.state);
+    // console.log(this.props);
+    // this.props.action(this.state);
     DaylyUserActivity(this.state);
   };
 

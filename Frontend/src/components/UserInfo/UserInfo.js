@@ -122,8 +122,6 @@ export default class UserInfo extends Component {
               className="inputaSubmit"
               name="attività3"
               value="Continue"
-
-              // disabled={!this.isFormValid}
             />
           </div>
         </div>
