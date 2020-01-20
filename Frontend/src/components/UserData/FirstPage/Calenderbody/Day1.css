@@ -20,7 +20,6 @@
 .control {
   display: flex;
   flex-direction: column;
-  justify-content: ;
   width: fit-content !important;
   background-color: #487eb0;
   width: 91px;
@@ -49,6 +48,17 @@ label {
   font-size: 19px;
   opacity: 0.9;
 }
-.totalTime {
+.totalTime:hover {
   width: 100px;
+  box-shadow: 3px 5px 10px white;
+  background-color: white;
+  opacity: 90%;
+  color: #0984e3;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  width: 90px;
+  height: 30px;
+  border-radius: 290486px;
+  transition: 0.5s;
 }

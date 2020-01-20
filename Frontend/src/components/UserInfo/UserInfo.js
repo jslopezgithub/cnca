@@ -16,9 +16,7 @@ export default class UserInfo extends Component {
       COGNOME: '',
       ORGANIZZAZIONE: '',
       SVOLGIMENTO: '',
-      attività1: '',
-      attività2: '',
-      attività3: ''
+      attività: ''
     };
   }
 
@@ -86,7 +84,7 @@ export default class UserInfo extends Component {
             required
           />
           {/* <InputIntry /> */}
-          <p>DEFINIZIONE attività 1</p>
+          <p>DEFINIZIONE attività</p>
           <input
             type="text"
             className="inputa editview"
@@ -95,7 +93,7 @@ export default class UserInfo extends Component {
             onChange={this.UpdateState}
             required
           />
-          {/* <InputIntry /> */}
+          {/* <InputIntry />
           <p>DEFINIZIONE attività 2</p>
           <input
             type="text"
@@ -105,7 +103,7 @@ export default class UserInfo extends Component {
             onChange={this.UpdateState}
             required
           />
-          {/* <InputIntry /> */}
+          {/* <InputIntry />
           <p>DEFINIZIONE attività 3</p>
           <input
             type="text"

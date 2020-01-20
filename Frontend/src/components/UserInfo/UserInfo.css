@@ -3,7 +3,7 @@
   background-image: url(../../Images/hero.jpg);
   width: 28%;
   margin-left: 15px;
-  height: 95%;
+  height: 100%;
   position: fixed;
 }
 .userinfo {
@@ -36,7 +36,7 @@
   border: none;
   width: 24px;
   height: 24px;
-  background-color: #4cd137;
+  background-color: #72fc6e;
   color: white;
 }
 .xclick {
@@ -53,7 +53,7 @@
 }
 
 .editview {
-  border: green solid 2px;
+  border: #4cd137 solid 2px;
   background-color: #f5faaa;
 }
 .userinfo p {
