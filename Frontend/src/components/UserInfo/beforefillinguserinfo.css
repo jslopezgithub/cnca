@@ -1,20 +1,20 @@
 .beforeUserInfo {
   background-image: url(../../Images/cnca-cover-image.png);
-  background-size: cover;
+  background-position: center;
   height: 100%;
 }
 .arrowBox {
   position: absolute;
   top: 78%;
-  left: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
 }
 .arrowBox span {
   display: inline-block;
   width: 30px;
   height: 30px;
-  border-right: 6px solid #ffffff;
-  border-top: 6px solid #ffffff;
+  border-right: 6px solid #4cf319;
+  border-top: 6px solid #0a6cc7;
   transform: rotate(230deg);
   /* margin: -10px; */
   animation: animate 2s infinite;

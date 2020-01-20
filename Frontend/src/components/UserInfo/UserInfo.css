@@ -106,6 +106,7 @@
   width: 95px;
   background-color: #0261b9;
   color: #fff;
+  cursor: pointer;
 }
 .inputaSubmit:hover {
   opacity: 0.9;

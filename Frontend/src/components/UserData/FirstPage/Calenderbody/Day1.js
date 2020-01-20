@@ -95,6 +95,7 @@ export default class Day1 extends Component {
         {/* ______________________________ day */}
         <div className="secondMainContainer">
           <div className="field ">
+            <label>SELEZIONA DATA</label>
             <DatePicker
               name="start_date"
               selected={this.state.start_date}
@@ -111,6 +112,7 @@ export default class Day1 extends Component {
 
           {/* _____________________________ingresso time box */}
           <div className="time">
+            <label>INGRESSO</label>
             <input
               className="timep1"
               type="time"
@@ -124,6 +126,7 @@ export default class Day1 extends Component {
           </div>
           {/* _____________________________Usicta */}
           <div className="time">
+            <label>USCITA</label>
             <input
               className="uscitap1"
               type="time"
@@ -137,6 +140,7 @@ export default class Day1 extends Component {
           </div>
           {/* -----------------------------------------------------------Ingresso */}
           <div className="TotalTimeContainer">
+            <label>ORE TOTALI</label>
             <p className="totalTime">{totalTime}</p>
           </div>
 
@@ -145,6 +149,7 @@ export default class Day1 extends Component {
             <div className="firstbox">
               <div className="selectContainer">
                 <div className="control">
+                  <label>SELEZIONA ATTIVITÀ</label>
                   <div>
                     <select
                       className="select"
@@ -165,7 +170,7 @@ export default class Day1 extends Component {
               </div>
             </div>
           </div>
-          <div className="control">
+          <div className="controll">
             {' '}
             <button type="submit" className="button is-link">
               Submit{' '}

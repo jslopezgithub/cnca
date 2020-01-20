@@ -16,9 +16,10 @@ export default function FirstPage(props) {
       <TotalHours />
       <UserName {...props} />
       <TotalTime />
+      {/*
       <div className="daystyling"></div>
       <div className="ingressobox">INGRESSO</div>
-      <div className="uscitabox">USCITA</div>
+      <div className="uscitabox">USCITA</div> */}
       <Day1 />
     </div>
   );
