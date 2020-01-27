@@ -8,7 +8,8 @@ import DatePicker from 'react-datepicker';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
-import { UserActivity, DaylyUserActivity } from '../../../../UserInfo-service';
+// eslint-disable-next-line import/named
+import { UserActivity } from '../../../../UserInfo-service';
 import './Calenderbody.css';
 import './Day1.css';
 
@@ -20,8 +21,8 @@ export default class Day1 extends Component {
       start_time: '',
       end_time: '',
       activity_type: '',
-      activity_type_id: '',
-      datas: [],
+      activity_type_id: [],
+      totalTime: [],
       loading: false
     };
   }
@@ -37,7 +38,7 @@ export default class Day1 extends Component {
   // }
 
   handleOnChange = e => {
-    console.log(e);
+    // console.log(e);
     this.setState({
       ...this.state,
       [e.target.name]: [e.target.value]
@@ -48,7 +49,7 @@ export default class Day1 extends Component {
     this.setState({
       start_date: date
     });
-    console.log(this.state);
+    //  console.log(this.state);
   };
 
   handleOnSelectActivity = e => {
@@ -58,18 +59,17 @@ export default class Day1 extends Component {
     this.setState({
       ...this.state,
       [e.target.name]: [e.target.value],
-      activity_type_id: jj
+      activity_type_id: jj,
+      totalTime: this.getTimeInterval(this.state)
     });
-    console.log(jj);
+    // console.log(jj);
   };
 
   handleOnSubmit = e => {
     e.preventDefault();
-
+    // eslint-disable-next-line react/prop-types
+    this.props.dailyData(this.state);
     console.log(this.state);
-    // console.log(this.props);
-    // this.props.action(this.state);
-    DaylyUserActivity(this.state);
   };
 
   getTimeInterval = e => {
@@ -80,14 +80,12 @@ export default class Day1 extends Component {
     const interval = moment()
       .hour(0)
       .minute(minutes);
-
     return interval.format('HH:mm');
   };
 
   render() {
-    // console.log(this.state.datas);
     const lists = UserActivity();
-    console.log(UserActivity());
+    // console.log(UserActivity());
     const totalTime = this.getTimeInterval(this.state);
 
     return (

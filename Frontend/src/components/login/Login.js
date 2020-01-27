@@ -9,20 +9,20 @@ export default class Login extends Component {
       <div id="mainContainer">
         <div className="body">
           <div className="dataBoxcont">
-            <div className="dataBoxcont2">
-              <span className="inputs">
-                <input type="text" placeholder="E-Mail"></input>
-                <span className="iconBackground">
+            <form className="dataBoxcont2">
+              <div className="inputs">
+                <input type="email" placeholder="E-Mail" required></input>
+                <div className="iconBackground">
                   <i className="Eicon fas fa-envelope"></i>
-                </span>
-                <input type="password" placeholder="password"></input>
-                <span className="iconBackground2">
+                </div>
+                <input type="password" placeholder="password" required></input>
+                <div className="iconBackground2">
                   <i className="Eicon2 fas fa-lock"></i>
-                </span>
-              </span>
-              <span className="checkBox">
+                </div>
+              </div>
+              <div className="checkBox">
                 <input type="checkbox" />
-              </span>
+              </div>
               <p className="Resta">Resta collegato</p>
               <Link to="./home/firstpage">
                 <button className="btn">ACCESSO</button>
@@ -38,7 +38,7 @@ export default class Login extends Component {
                   Registrare
                 </Link>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

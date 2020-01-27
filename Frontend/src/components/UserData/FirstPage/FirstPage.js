@@ -15,12 +15,12 @@ export default function FirstPage(props) {
     <div className="FirstPage">
       <TotalHours />
       <UserName {...props} />
-      <TotalTime />
+      <TotalTime {...props} />
       {/*
       <div className="daystyling"></div>
       <div className="ingressobox">INGRESSO</div>
       <div className="uscitabox">USCITA</div> */}
-      <Day1 />
+      <Day1 {...props} />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 /* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
-import Beforefillinguserinfo from './UserInfo/Beforefillinguserinfo';
+// import Beforefillinguserinfo from './UserInfo/Beforefillinguserinfo';
 import Home from './Shared/Home';
 import UserInfo from './UserInfo/UserInfo';
 import './AfterLogin.css';
@@ -10,7 +10,8 @@ export default class AfterLogin extends Component {
     super(props);
     this.state = {
       loading: false,
-      userinfo: {}
+      userinfo: {},
+      dailyActivity: ''
     };
   }
 
@@ -19,6 +20,13 @@ export default class AfterLogin extends Component {
     this.setState({
       userinfo: userdata,
       loading: true
+    });
+  };
+
+  handlingDailyActivity = dailyData => {
+    console.log(dailyData);
+    this.setState({
+      dailyActivity: dailyData
     });
   };
 
@@ -31,11 +39,15 @@ export default class AfterLogin extends Component {
         </div>
 
         <div className="beforeAndAfter">
-          {this.state.loading === false ? (
+          {/* {this.state.loading === false ? (
             <Beforefillinguserinfo />
-          ) : (
-            <Home userName={this.state.userinfo} />
-          )}
+          ) : ( */}
+          <Home
+            userName={this.state.userinfo}
+            dailyData={this.handlingDailyActivity}
+            totalTimeDaily={this.state.dailyActivity}
+          />
+          {/* )} */}
         </div>
       </div>
     );

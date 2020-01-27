@@ -1,25 +1,25 @@
 // /* eslint-disable no-undef */
-import axios from 'axios';
+// import axios from 'axios';
 // // eslint-disable-next-line import/prefer-default-export
-function DaylyUserActivity(data) {
-  console.log(data.start_date);
-  axios('your post url here', {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      activity_date: data.start_date,
-      start_time: data.start_time,
-      end_time: data.end_time,
-      activity_type_id: data.activity_type_id
-    })
-  })
-    .then(res => res.json())
-    .then(lastRes => console.log(lastRes))
-    .catch(err => console.log(err));
-}
+// function DaylyUserActivity(data) {
+//   console.log(data.start_date);
+//   axios('your post url here', {
+//     method: 'POST',
+//     headers: {
+//       Accept: 'application/json',
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify({
+//       activity_date: data.start_date,
+//       start_time: data.start_time,
+//       end_time: data.end_time,
+//       activity_type_id: data.activity_type_id
+//     })
+//   })
+//     .then(res => res.json())
+//     .then(lastRes => console.log(lastRes))
+//     .catch(err => console.log(err));
+// }
 
 // // function DailyUserData(data) {
 // // console.log(data);
@@ -77,4 +77,5 @@ function UserActivity() {
   ];
   return lists;
 }
-export { UserActivity, DaylyUserActivity };
+// eslint-disable-next-line import/prefer-default-export
+export { UserActivity };

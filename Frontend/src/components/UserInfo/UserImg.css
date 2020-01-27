@@ -6,14 +6,15 @@
   top: 3%;
   left: 38%;
   overflow: hidden;
-  color: #dcdde1;
-}
-
-.UserImg:hover:before {
-  transform: scale(1.1);
-}
-.UserImg:hover {
   color: white;
+}
 
+.UserImg:hover {
+  transform: scale(1.1);
   cursor: pointer;
 }
+/* .UserImg:hover {
+
+
+ 
+} */
