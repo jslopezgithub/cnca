@@ -21,25 +21,26 @@
 //     .catch(err => console.log(err));
 // }
 
-// // function DailyUserData(data) {
-// // console.log(data);
-// // return axios(`${API}`, {
-// //   method: 'GET',
-// //   mode: 'CORS',
-// //   body: JSON.stringify(data),
-// //   headers: {
-// //     'Content-Type': 'application/json'
-// //   }
-// // })
-// //   .then(res => console.log(`${res}`))
-// //   .catch(err => console.log(`oops ${err}`));
-// // }
+// function DailyUserData(data) {
+// console.log(data);
+// return axios(`${API}`, {
+//   method: 'GET',
+//   mode: 'CORS',
+//   body: JSON.stringify(data),
+//   headers: {
+//     'Content-Type': 'application/json'
+//   }
+// })
+//   .then(res => console.log(`${res}`))
+//   .catch(err => console.log(`oops ${err}`));
+// }
 
+// function UserActivity() {
+//   fetch('http://localhost:5000/api/activities/types')
+//     .then(res => console.log(res))
+//     .catch(err => console.log(`oops ${err}`));
+// }
 function UserActivity() {
-  // fetch('http://localhost:5000/api/activities/types')
-  //   .then(res => console.log(res))
-  //   .catch(err => console.log(`oops ${err}`));
-  // // }
   const lists = [
     { id: '1', name: 'attività1', is_daily: '0' },
     { id: '2', name: 'attività2', is_daily: '0' },

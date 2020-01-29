@@ -93,27 +93,7 @@ export default class UserInfo extends Component {
             onChange={this.UpdateState}
             required
           />
-          {/* <InputIntry />
-          <p>DEFINIZIONE attività 2</p>
-          <input
-            type="text"
-            className="inputa editview"
-            name="attività2"
-            value={this.state.attività2}
-            onChange={this.UpdateState}
-            required
-          />
-          {/* <InputIntry />
-          <p>DEFINIZIONE attività 3</p>
-          <input
-            type="text"
-            className="inputa editview"
-            name="attività3"
-            value={this.state.attività3}
-            onChange={this.UpdateState}
-            required
-          />
-          {/* <InputIntry /> */}
+
           <div>
             <input
               type="submit"
