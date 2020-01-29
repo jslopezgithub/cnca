@@ -5,13 +5,30 @@
   position: fixed;
   top: 27%;
   left: 34%;
-  width: 50%;
-  height: 35px;
-  background-color: white;
+  width: 64%;
+  height: 55px;
+  background-color: rgb(250, 242, 242);
   display: flex;
-  border-radius: 290486px;
+  justify-content: space-between;
+  border-radius: 10px 10px 10px 10px !important;
   border: #b2bec3 solid 1px;
   /* overflow: hidden; */
+}
+.field,
+.TotalTimeContainer,
+.time,
+.control {
+  display: flex;
+  flex-direction: column;
+  width: fit-content !important;
+  background-color: #487eb0;
+  width: 91px;
+  height: 55px;
+  border-radius: 10px 10px 0px 0px;
+  color: aliceblue;
+}
+label {
+  text-align: center;
 }
 .select,
 .uscitap1,
@@ -22,6 +39,26 @@
   width: 100%;
 }
 .button.is-link {
-  border-radius: 290486px !important;
-  height: 35px;
+  background-color: #487eb0 !important;
+  border-radius: 10px 10px 10px 10px !important;
+  height: 55px !important;
+  width: 95px;
+}
+.button.is-link:hover {
+  font-size: 19px;
+  opacity: 0.9;
+}
+.totalTime:hover {
+  width: 100px;
+  box-shadow: 3px 5px 10px white;
+  background-color: white;
+  opacity: 90%;
+  color: #0984e3;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  width: 90px;
+  height: 30px;
+  border-radius: 290486px;
+  transition: 0.5s;
 }

@@ -1,6 +1,7 @@
 .FristPage {
   display: flex;
   position: absolute;
+  background-image: url('../../../Images/hero.jpg');
   width: 71%;
   height: 81%;
   flex-wrap: wrap;
@@ -12,7 +13,7 @@
   position: absolute;
   left: 9.5%;
   top: 12%;
-  background-color: #487eb0;
+  /* background-color: #487eb0; */
   width: 13%;
   height: 64%;
   border-radius: 15px;

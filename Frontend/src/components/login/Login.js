@@ -6,39 +6,39 @@ export default class Login extends Component {
   // eslint-disable-next-line class-methods-use-this
   render() {
     return (
-      <div id='mainContainer'>
-        <div className='body'>
-          <div className='dataBoxcont'>
-            <div className='dataBoxcont2'>
-              <span className='inputs'>
-                <input type='text' placeholder='E-Mail'></input>
-                <span className='iconBackground'>
-                  <i className='Eicon fas fa-envelope'></i>
-                </span>
-                <input type='password' placeholder='password'></input>
-                <span className='iconBackground2'>
-                  <i className='Eicon2 fas fa-lock'></i>
-                </span>
-              </span>
-              <span className='checkBox'>
-                <input type='checkbox' />
-              </span>
-              <p className='Resta'>Resta collegato</p>
-              <Link to='./home/firstpage'>
-                <button className='btn'>ACCESSO</button>
+      <div id="mainContainer">
+        <div className="body">
+          <div className="dataBoxcont">
+            <form className="dataBoxcont2">
+              <div className="inputs">
+                <input type="email" placeholder="E-Mail" required></input>
+                <div className="iconBackground">
+                  <i className="Eicon fas fa-envelope"></i>
+                </div>
+                <input type="password" placeholder="password" required></input>
+                <div className="iconBackground2">
+                  <i className="Eicon2 fas fa-lock"></i>
+                </div>
+              </div>
+              <div className="checkBox">
+                <input type="checkbox" />
+              </div>
+              <p className="Resta">Resta collegato</p>
+              <Link to="./home/firstpage">
+                <button className="btn">ACCESSO</button>
               </Link>
               {/* ------------------------------Forget password  & Registration Links */}
-              <div className='fpassword'>
-                <Link to='./forget-password' style={{ color: 'white' }}>
-                  Ha dimrnticato <br /> la password?
+              <div className="fpassword">
+                <Link to="./forget-password" style={{ color: 'white' }}>
+                  Hai dimenticato <br /> la password?
                 </Link>
               </div>
-              <div className='registare'>
-                <Link to='./sign-up' style={{ color: 'white' }}>
-                  Registare
+              <div className="registare">
+                <Link to="./sign-up" style={{ color: 'white' }}>
+                  Registrare
                 </Link>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

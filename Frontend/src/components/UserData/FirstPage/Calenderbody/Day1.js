@@ -3,11 +3,13 @@
 import React, { Component } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import moment from 'moment';
+// import axios from 'axios';
 import DatePicker from 'react-datepicker';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
-import UserActivityLists from './UserActivityLists';
+// eslint-disable-next-line import/named
+import { UserActivity } from '../../../../UserInfo-service';
 import './Calenderbody.css';
 import './Day1.css';
 
@@ -18,12 +20,25 @@ export default class Day1 extends Component {
       start_date: new Date(),
       start_time: '',
       end_time: '',
-      activity_type: ''
+      activity_type: '',
+      activity_type_id: [],
+      totalTime: [],
+      loading: false
     };
   }
 
-  handdleOnChange = e => {
-    console.log(e);
+  // componentDidMount() {
+  //   return axios
+  //     .get('http://localhost:5000/api/activities/types')
+  //     .then(res => this.setState({ datas: res.data, loading: true }))
+  //     .catch(err => {
+  //       // eslint-disable-next-line no-unused-expressions
+  //       `oops u got this ${err}`;
+  //     });
+  // }
+
+  handleOnChange = e => {
+    // console.log(e);
     this.setState({
       ...this.state,
       [e.target.name]: [e.target.value]
@@ -34,12 +49,26 @@ export default class Day1 extends Component {
     this.setState({
       start_date: date
     });
-    console.log(this.state);
+    //  console.log(this.state);
   };
 
-  handdleOnSubmit = e => {
-    e.preventDefault();
+  handleOnSelectActivity = e => {
+    const jj = UserActivity()
+      .filter(milley => milley.name === e.target.value)
+      .map(k => k.id);
+    this.setState({
+      ...this.state,
+      [e.target.name]: [e.target.value],
+      activity_type_id: jj,
+      totalTime: this.getTimeInterval(this.state)
+    });
+    // console.log(jj);
+  };
 
+  handleOnSubmit = e => {
+    e.preventDefault();
+    // eslint-disable-next-line react/prop-types
+    this.props.dailyData(this.state);
     console.log(this.state);
   };
 
@@ -51,20 +80,20 @@ export default class Day1 extends Component {
     const interval = moment()
       .hour(0)
       .minute(minutes);
-
     return interval.format('HH:mm');
   };
 
   render() {
-    // const date = '10/10';
+    const lists = UserActivity();
+    // console.log(UserActivity());
     const totalTime = this.getTimeInterval(this.state);
-    console.log(totalTime);
-    // const day = "MERCOLEDI'";
+
     return (
-      <form className="mainContainer1" onSubmit={this.handdleOnSubmit}>
+      <form className="mainContainer1" onSubmit={this.handleOnSubmit}>
         {/* ______________________________ day */}
         <div className="secondMainContainer">
           <div className="field ">
+            <label>SELEZIONA DATA</label>
             <DatePicker
               name="start_date"
               selected={this.state.start_date}
@@ -81,6 +110,7 @@ export default class Day1 extends Component {
 
           {/* _____________________________ingresso time box */}
           <div className="time">
+            <label>INGRESSO</label>
             <input
               className="timep1"
               type="time"
@@ -88,12 +118,13 @@ export default class Day1 extends Component {
               min="06:00"
               max="18:00"
               value={this.state.start_time}
-              onChange={this.handdleOnChange}
+              onChange={this.handleOnChange}
               required
             />
           </div>
           {/* _____________________________Usicta */}
           <div className="time">
+            <label>USCITA</label>
             <input
               className="uscitap1"
               type="time"
@@ -101,51 +132,43 @@ export default class Day1 extends Component {
               min="06:00"
               max="18:00"
               value={this.state.end_time}
-              onChange={this.handdleOnChange}
+              onChange={this.handleOnChange}
               required
             />
           </div>
           {/* -----------------------------------------------------------Ingresso */}
           <div className="TotalTimeContainer">
+            <label>ORE TOTALI</label>
             <p className="totalTime">{totalTime}</p>
           </div>
 
           {/* ----------------------------------------------------------------selezionare */}
           <div className="selezionare">
-            {/* <div className="firstbox">
+            <div className="firstbox">
               <div className="selectContainer">
                 <div className="control">
+                  <label>SELEZIONA ATTIVITÀ</label>
                   <div>
                     <select
                       className="select"
                       name="activity_type"
                       value={this.state.activity_type}
-                      onChange={this.handdleOnChange}
+                      onChange={this.handleOnSelectActivity}
                       required
+                      // eslint-disable-next-line react/jsx-no-comment-textnodes
                     >
-                      <option value="attivitÃ 1">attivitÃ 1</option>
-                      <option>attivitÃ 2</option>
-                      <option>attivitÃ 3 </option>
-                      <option>ferie</option>
-                      <option>malattia </option>
-                      <option>Recupero ore lavoro in festivo</option>
-                      <option>
-                        Formazione Generale edit 8 Formazione Specifica
-                      </option>
-                      <option>Formazione FAD</option>
-                      <option>PERMESSO str: donazione sangue</option>
-                      <option>PERMESSO str: diritto di voto</option>
-                      <option>PERMESSO str: testimone g</option>
-                      <option>PERMESSO str: seggio elettorale</option>
+                      // eslint-disable-next-line valid-typeof
+                      {lists.map((e, i) => (
+                        <option key={i}>{e.name}</option>
+                      ))}
                     </select>
                   </div>
                 </div>
+                {/* <p className="help is-success">Select your activity</p> */}
               </div>
             </div>
-          */}
-            <UserActivityLists />
           </div>
-          <div className="control">
+          <div className="controll">
             {' '}
             <button type="submit" className="button is-link">
               Submit{' '}
@@ -156,181 +179,3 @@ export default class Day1 extends Component {
     );
   }
 }
-
-// /* eslint-disable camelcase */
-// /* eslint-disable class-methods-use-this */
-// import React, { Component } from 'react';
-// // eslint-disable-next-line import/no-extraneous-dependencies
-// import moment from 'moment';
-
-// import './Calenderbody.css';
-// import Datepicker from '../../../UserInfo/Datepicker';
-// import './Day1.css';
-
-// export default class Day1 extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       start_time: '',
-//       end_time: '',
-//       activity_type: '',
-//       recived_data: '',
-//       total_time: '00:00'
-//     };
-//   }
-
-//   handdleOnChange = e => {
-//     console.log(e);
-//     this.setState({
-//       ...this.state,
-//       [e.target.name]: [e.target.value],
-//       recived_data: this.props
-//     });
-//   };
-
-//   handdleOnSubmit = e => {
-//     e.preventDefault();
-//     this.setState({ total_time: this.getTimeInterval() });
-//     console.log(this.state);
-//   };
-
-//   _resetState = () => {
-//     this.setState();
-//   };
-
-//   getTimeInterval = () => {
-//     const { start_time, end_time } = this.state;
-//     const start = moment(start_time, 'HH:mm');
-//     const end = moment(end_time, 'HH:mm');
-//     const minutes = end.diff(start, 'minutes');
-//     const interval = moment()
-//       .hour(0)
-//       .minute(minutes);
-
-//     return interval.format('HH:mm');
-//   };
-
-//   render() {
-//     // const date = '10/10';
-//     // const totalTime = '0:00';
-//     // const day = "MERCOLEDI'";
-
-//     return (
-//       <form className="mainContainer1" onSubmit={this.handdleOnSubmit}>
-//         <div className="box is-centered ">
-//           <div className="field ">
-//             <label className="label is-spaced">
-//               Select date :<Datepicker />
-//             </label>
-//           </div>
-//           <div>
-//             <label className="label">Activities</label>
-//             <div className="control">
-//               <div>
-//                 <select
-//                   className="select"
-//                   name="activity_type"
-//                   value={this.state.activity_type}
-//                   onChange={this.handdleOnChange}
-//                   required
-//                 >
-//                   <option value="attivitÃ 1">attivitÃ 1</option>
-//                   <option>attivitÃ 2</option>
-//                   <option>attivitÃ 3 </option>
-//                   <option>ferie</option>
-//                   <option>malattia </option>
-//                   <option>Recupero ore lavoro in festivo</option>
-//                   <option>
-//                     Formazione Generale edit 8 Formazione Specifica
-//                   </option>
-//                   <option>Formazione FAD</option>
-//                   <option>PERMESSO str: donazione sangue</option>
-//                   <option>PERMESSO str: diritto di voto</option>
-//                   <option>PERMESSO str: testimone g</option>
-//                   <option>PERMESSO str: seggio elettorale</option>
-//                 </select>
-//               </div>
-//             </div>
-//             <p className="help is-success">Select your activity</p>
-//           </div>
-//           <div>
-//             <label className="label">Start Time</label>
-//             <div className="control has-icons-left ">
-//               <input
-//                 className="input"
-//                 type="time"
-//                 name="start_time"
-//                 min="06:00"
-//                 max="18:00"
-//                 value={this.state.start_time}
-//                 onChange={this.handdleOnChange}
-//                 required
-//               />
-//               <div className="icon is-small is-left">
-//                 <i className="fas fa-clock"></i>
-//               </div>
-//             </div>
-//             <p className="help is-success">
-//               Your starting time for your activity
-//             </p>
-//           </div>
-//           <div>
-//             <label className="label">End Time</label>
-//             <div className="control has-icons-left ">
-//               <input
-//                 className="input"
-//                 type="time"
-//                 name="end_time"
-//                 min="06:00"
-//                 max="18:00"
-//                 value={this.state.end_time}
-//                 onChange={this.handdleOnChange}
-//                 required
-//               />
-//               <div className="icon is-small is-left">
-//                 <i className="fas fa-clock"></i>
-//               </div>
-//             </div>
-//             <p className="help is-success">
-//               Your finishing time for your activity
-//             </p>
-//           </div>
-//           <div>
-//             <label className="label">Total Time</label>
-//             <div className="control has-icons-left ">
-//               <input
-//                 className="input"
-//                 type="text"
-//                 value={this.state.total_time}
-//                 readOnly
-//               />
-//               <div className="icon is-small is-left">
-//                 <i className="fas fa-clock"></i>
-//               </div>
-//             </div>
-//             <p className="help is-success">
-//               This is your current total activity
-//             </p>
-//           </div>
-//           <vr />{' '}
-//         </div>
-//         <div className="field is-grouped">
-//           <div className="control">
-//             <button type="submit" className="button is-link">
-//               Submit
-//             </button>
-//           </div>
-//           <div className="control">
-//             <button
-//               className="button is-link is-danger"
-//               // eslint-disable-next-line no-underscore-dangle
-//               onClick={this._resetState}
-//             >
-//               Cancel
-//             </button>
-//           </div>
-//         </div>
-//       </form>
-//     );
-//   }
-// }

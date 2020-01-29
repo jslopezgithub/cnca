@@ -70,8 +70,6 @@ function createActivity(req, res) {
 }
 
 module.exports = (req, res) => {
-
-    
   switch (req.method) {
     case 'GET':
       {
@@ -79,21 +77,18 @@ module.exports = (req, res) => {
       }
       break;
 
-        
+
       {
         return createActivity(req, res);
       }
       break;
     case 'DELETE':
       {
-
-
         if (!parseInt(id)) {
           res.send({ message: 'FORMAT_ERR' });
         }
 
         return deleteActivity(id);
-
       }
       break;
   }

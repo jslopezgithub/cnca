@@ -31,7 +31,7 @@
   top: 7.5px;
   left: 4.5px;
   color: #dcdde1;
-  font-size: 41px;
+  /* font-size: 41px; */
   transition: 0.3s;
   cursor: pointer;
 }

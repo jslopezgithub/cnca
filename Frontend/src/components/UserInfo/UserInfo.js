@@ -16,9 +16,7 @@ export default class UserInfo extends Component {
       COGNOME: '',
       ORGANIZZAZIONE: '',
       SVOLGIMENTO: '',
-      attività1: '',
-      attività2: '',
-      attività3: ''
+      attività: ''
     };
   }
 
@@ -29,9 +27,21 @@ export default class UserInfo extends Component {
     });
   };
 
+  handleSubmit = e => {
+    e.preventDefault();
+    // eslint-disable-next-line react/prop-types
+    this.props.action(this.state);
+  };
+
   render() {
     return (
-      <form className="maincontainer">
+      <form
+        className="maincontainer"
+        onSubmit={
+          this.handleSubmit
+          // eslint-disable-next-line react/prop-types
+        }
+      >
         <UserImg />
         <div className="userinfo">
           <p>NOME</p>
@@ -42,6 +52,7 @@ export default class UserInfo extends Component {
             name="NOME"
             value={this.state.NOME}
             onChange={this.UpdateState}
+            required
           />
           <p>COGNOME</p>
           <input
@@ -50,6 +61,7 @@ export default class UserInfo extends Component {
             name="COGNOME"
             value={this.state.COGNOME}
             onChange={this.UpdateState}
+            required
           />
           {/* <InputIntry /> */}
           <p>ORGANIZZAZIONE</p>
@@ -59,6 +71,7 @@ export default class UserInfo extends Component {
             name="ORGANIZZAZIONE"
             value={this.state.ORGANIZZAZIONE}
             onChange={this.UpdateState}
+            required
           />
           {/* <InputIntry /> */}
           <p>SEDE DO SVOLGIMENTO</p>
@@ -68,17 +81,19 @@ export default class UserInfo extends Component {
             name="SVOLGIMENTO"
             value={this.state.SVOLGIMENTO}
             onChange={this.UpdateState}
+            required
           />
           {/* <InputIntry /> */}
-          <p>DEFINIZIONE attività 1</p>
+          <p>DEFINIZIONE attività</p>
           <input
             type="text"
             className="inputa editview"
             name="attività1"
             value={this.state.attività1}
             onChange={this.UpdateState}
+            required
           />
-          {/* <InputIntry /> */}
+          {/* <InputIntry />
           <p>DEFINIZIONE attività 2</p>
           <input
             type="text"
@@ -86,8 +101,9 @@ export default class UserInfo extends Component {
             name="attività2"
             value={this.state.attività2}
             onChange={this.UpdateState}
+            required
           />
-          {/* <InputIntry /> */}
+          {/* <InputIntry />
           <p>DEFINIZIONE attività 3</p>
           <input
             type="text"
@@ -95,19 +111,17 @@ export default class UserInfo extends Component {
             name="attività3"
             value={this.state.attività3}
             onChange={this.UpdateState}
+            required
           />
           {/* <InputIntry /> */}
-          <input
-            type="button"
-            className="inputa editview"
-            name="attività3"
-            value="Continue"
-            // disabled={!this.isFormValid}
-            onClick={() =>
-              // eslint-disable-next-line react/prop-types
-              this.props.action(this.state)
-            }
-          />
+          <div>
+            <input
+              type="submit"
+              className="inputaSubmit"
+              name="attività3"
+              value="Continue"
+            />
+          </div>
         </div>
 
         {/* <Pagination /> */}

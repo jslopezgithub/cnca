@@ -1,9 +1,9 @@
 .maincontainer {
   display: flex;
-  background-color: #353b48;
-  width: 25%;
+  background-image: url(../../Images/hero.jpg);
+  width: 28%;
   margin-left: 15px;
-  height: 95%;
+  height: 100%;
   position: fixed;
 }
 .userinfo {
@@ -36,7 +36,7 @@
   border: none;
   width: 24px;
   height: 24px;
-  background-color: #4cd137;
+  background-color: #72fc6e;
   color: white;
 }
 .xclick {
@@ -53,7 +53,7 @@
 }
 
 .editview {
-  border: green solid 2px;
+  border: #4cd137 solid 2px;
   background-color: #f5faaa;
 }
 .userinfo p {
@@ -94,4 +94,20 @@
 }
 .paginationBody li p {
   padding: 3px 6px 3px 6px;
+}
+.buttonClass {
+  display: flex;
+}
+.inputaSubmit {
+  font-size: 19px;
+  border-radius: 290486px;
+  margin-top: 20px;
+  height: 35px;
+  width: 95px;
+  background-color: #0261b9;
+  color: #fff;
+  cursor: pointer;
+}
+.inputaSubmit:hover {
+  opacity: 0.9;
 }
