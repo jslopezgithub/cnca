@@ -67,7 +67,7 @@ CREATE TABLE `users_password`(
   `createdAt` 					    datetime DEFAULT current_timestamp(),
   `updatedAt` 					    datetime DEFAULT NULL,
 
-   CONSTRAINT `volunteer_id` FOREIGN KEY (`volunteer_id`) REFERENCES `users` (`id`)
+   CONSTRAINT `volunteer_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
