@@ -1,6 +1,7 @@
 use cnca;
-INSERT INTO roles (name)
-VALUES ("admin"), ("volunteer");
+INSERT INTO roles (nome)
+VALUES ("admin"),
+       ("volunteer");
 
 -- this date isn't fake
 INSERT into holidays (holiday, is_continious)
@@ -37,13 +38,13 @@ VALUES          -- id
 ("PERMESSO str: seggio elettorale", 0); -- 13
 
 INSERT INTO 
-users  (nome, cognome, data_di_nascita, organizzazione, email, password)
-VALUES ('Ramazan',  'Aliskhanov',   '1986-7-06',   'GreenVolunteers',   'social@gmail.com',      '1234567'), -- #1
-('Ahmad',    'Macsud',       '1983-8-05',   'RedCross Roma',            'ahmed@rcr.com',         '1234567'), -- #2
-('Hlyal',    'Ibn Amin',     '1990-9-04',   'Doctors Without Borders',  'ramazan3@gmail.com',    '1234567'), -- #3
-('Ramazan',  'Aliskhanov',   '1994-10-03',  'CYF Volunteer',            'ravillion@mail.com',    '1234567'), -- #4
-('Ramazan',  'Aliskhanov',   '1980-11-02',  'GreenVolunteers',          'voluone@gv.com',        '1234567'), -- #5
-('Ramazan',  'Aliskhanov',   '1998-12-01',  'GreenVolunteers',          'ramazan6@gv.com',       '1234567'); -- #6
+users  (nome, cognome, data_di_nascita, organizzazione, email, activity_id)
+VALUES ('Ramazan',  'Aliskhanov',   '1986-7-06',   'GreenVolunteers',   'social@gmail.com', 1), -- #1
+('Ahmad',    'Macsud',       '1983-8-05',   'RedCross Roma',            'ahmed@rcr.com', 1), -- #2
+('Hlyal',    'Ibn Amin',     '1990-9-04',   'Doctors Without Borders',  'ramazan3@gmail.com', 1), -- #3
+('Ramazan',  'Aliskhanov',   '1994-10-03',  'CYF Volunteer',            'ravillion@mail.com', 1), -- #4
+('Ramazan',  'Aliskhanov',   '1980-11-02',  'GreenVolunteers',          'voluone@gv.com', 1), -- #5
+('Ramazan',  'Aliskhanov',   '1998-12-01',  'GreenVolunteers',          'ramazan6@gv.com', 1); -- #6
 
 INSERT INTO 
 activities (volunteer_id, activity_date, start_time, end_time, activity_type_id)

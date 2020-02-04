@@ -57,17 +57,16 @@ CREATE TABLE `users_tokens` (
   CONSTRAINT `user_token_owner` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `users_password`(
-
-  `id` int(11)            NOT NULL AUTO_INCREMENT,
-  `user_id` int(11)       NOT NULL,
-  `password` varchar(128) NOT NULL,
-  `hmac` varchar(32)      NOT NULL,
-  
-  `createdAt` 					    datetime DEFAULT current_timestamp(),
-  `updatedAt` 					    datetime DEFAULT NULL,
-
-   CONSTRAINT `volunteer_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+CREATE TABLE `users_password`
+(
+    `id`        int(11)      NOT NULL AUTO_INCREMENT,
+    `user_id`   int(11)      NOT NULL,
+    `password`  varchar(128) NOT NULL,
+    `hmac`      varchar(32)  NOT NULL,
+    `createdAt` datetime DEFAULT current_timestamp(),
+    `updatedAt` datetime DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    CONSTRAINT `volunteer_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
