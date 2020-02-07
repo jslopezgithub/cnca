@@ -3,13 +3,13 @@
 import React, { Component } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import moment from 'moment';
-// import axios from 'axios';
+import axios from 'axios';
 import DatePicker from 'react-datepicker';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
 // eslint-disable-next-line import/named
-import { UserActivity } from '../../../../UserInfo-service';
+// import { UserActivity } from '../../../../UserInfo-service';
 import './Calenderbody.css';
 import './Day1.css';
 
@@ -23,19 +23,20 @@ export default class Day1 extends Component {
       activity_type: '',
       activity_type_id: [],
       totalTime: [],
-      loading: false
+      loading: false,
+      datas: ''
     };
   }
 
-  // componentDidMount() {
-  //   return axios
-  //     .get('http://localhost:5000/api/activities/types')
-  //     .then(res => this.setState({ datas: res.data, loading: true }))
-  //     .catch(err => {
-  //       // eslint-disable-next-line no-unused-expressions
-  //       `oops u got this ${err}`;
-  //     });
-  // }
+  componentDidMount() {
+    return axios
+      .get('http://localhost:5000/api/activities/types')
+      .then(res => this.setState({ datas: res.data, loading: true }))
+      .catch(err => {
+        // eslint-disable-next-line no-unused-expressions
+        `oops u got this ${err}`;
+      });
+  }
 
   handleOnChange = e => {
     // console.log(e);
@@ -53,8 +54,8 @@ export default class Day1 extends Component {
   };
 
   handleOnSelectActivity = e => {
-    const jj = UserActivity()
-      .filter(milley => milley.name === e.target.value)
+    const jj = this.state.datas
+      .filter(milley => milley.nome === e.target.value)
       .map(k => k.id);
     this.setState({
       ...this.state,
@@ -62,7 +63,7 @@ export default class Day1 extends Component {
       activity_type_id: jj,
       totalTime: this.getTimeInterval(this.state)
     });
-    // console.log(jj);
+    console.log(jj);
   };
 
   handleOnSubmit = e => {
@@ -84,8 +85,8 @@ export default class Day1 extends Component {
   };
 
   render() {
-    const lists = UserActivity();
-    // console.log(UserActivity());
+    const lists = this.state.datas;
+    console.log(this.state.datas);
     const totalTime = this.getTimeInterval(this.state);
 
     return (
@@ -158,9 +159,11 @@ export default class Day1 extends Component {
                       // eslint-disable-next-line react/jsx-no-comment-textnodes
                     >
                       // eslint-disable-next-line valid-typeof
-                      {lists.map((e, i) => (
-                        <option key={i}>{e.name}</option>
-                      ))}
+                      {this.state.loading ? (
+                        lists.map((e, i) => <option key={i}>{e.nome}</option>)
+                      ) : (
+                        <option>Loading</option>
+                      )}
                     </select>
                   </div>
                 </div>
